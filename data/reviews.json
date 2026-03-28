@@ -1,0 +1,43 @@
+{
+  "average": 4.8,
+  "count": 320,
+  "platform": "Google",
+  "reviews": [
+    {
+      "author": "Sophie M.",
+      "rating": 5,
+      "text": "L'endroit le plus magique de la cote. On a reserve pour un verre, on est restes toute la soiree. Les cocktails sont incroyables et le coucher de soleil depuis la terrasse, inoubliable.",
+      "source": "Google"
+    },
+    {
+      "author": "Antoine R.",
+      "rating": 5,
+      "text": "Ambiance parfaite pour un afterwork. Le DJ etait au top, le service impeccable et le cadre juste dingue. On y retourne vendredi.",
+      "source": "TripAdvisor"
+    },
+    {
+      "author": "Clara D.",
+      "rating": 5,
+      "text": "J'ai privatise le Palm Beach pour mes 30 ans. L'equipe a ete aux petits soins du debut a la fin. Mes invites en parlent encore. Merci !",
+      "source": "Google"
+    },
+    {
+      "author": "Maxime L.",
+      "rating": 4,
+      "text": "Super cadre, tres photogenique. Les cocktails signature valent le detour, surtout le Tropical Smoke. Seul bemol : difficile d'avoir une table sans reservation le samedi.",
+      "source": "Google"
+    },
+    {
+      "author": "Ines B.",
+      "rating": 5,
+      "text": "Le brunch du dimanche est une pepite. Assiettes generiques, jus frais, et cette vue... Le tout avec un DJ acoustique en fond. Paradis.",
+      "source": "TripAdvisor"
+    },
+    {
+      "author": "Thomas K.",
+      "rating": 5,
+      "text": "Meilleur rooftop ou j'ai ete en France. L'ambiance, la deco, les cocktails — tout est soigne. On sent que c'est fait avec passion. Bravo.",
+      "source": "Google"
+    }
+  ]
+}

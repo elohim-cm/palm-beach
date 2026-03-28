@@ -1,0 +1,69 @@
+[
+  {
+    "date": "2026-03-28",
+    "endDate": null,
+    "recurrent": false,
+    "title": "Sunset Session — DJ Set",
+    "description": "Deep house & tropical vibes des 19h avec DJ Manu. Ambiance golden hour garantie.",
+    "time": "19h - 01h",
+    "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=75",
+    "cta": {
+      "label": "Reserver",
+      "url": "#reservation"
+    }
+  },
+  {
+    "date": "2026-04-05",
+    "endDate": null,
+    "recurrent": false,
+    "title": "Full Moon Party",
+    "description": "Soiree speciale pleine lune. Cocktails ephemeres, live percussion, ambiance lunaire sur le rooftop.",
+    "time": "20h - 02h",
+    "image": "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=600&q=75",
+    "cta": {
+      "label": "Reserver",
+      "url": "#reservation"
+    }
+  },
+  {
+    "date": null,
+    "endDate": null,
+    "recurrent": true,
+    "recurrentLabel": "Mardi au Jeudi",
+    "title": "Happy Hour Afterwork",
+    "description": "-30% sur tous les cocktails de 18h a 20h. L'excuse parfaite pour decompresser entre amis.",
+    "time": "18h - 20h",
+    "image": "https://images.unsplash.com/photo-1575444758702-4a6b9222c016?auto=format&fit=crop&w=600&q=75",
+    "cta": {
+      "label": "Reserver",
+      "url": "#reservation"
+    }
+  },
+  {
+    "date": "2026-04-12",
+    "endDate": null,
+    "recurrent": false,
+    "title": "Tropical Brunch",
+    "description": "Brunch du dimanche en terrasse. Assiettes exotiques, jus presses, cocktails brunch et DJ acoustique.",
+    "time": "11h - 16h",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=75",
+    "cta": {
+      "label": "Reserver",
+      "url": "#reservation"
+    }
+  },
+  {
+    "date": null,
+    "endDate": null,
+    "recurrent": true,
+    "recurrentLabel": "Vendredi & Samedi",
+    "title": "Live DJ Sets",
+    "description": "Chaque week-end, un DJ resident ou invite pose le son. Afro house, deep, balearic, nu disco.",
+    "time": "21h - 02h",
+    "image": "https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?auto=format&fit=crop&w=600&q=75",
+    "cta": {
+      "label": "Reserver",
+      "url": "#reservation"
+    }
+  }
+]

@@ -1,0 +1,329 @@
+/* ============================================
+   EVENTS — Programmation & Agenda
+   ============================================ */
+
+.events {
+  padding: var(--section-padding) 0;
+  background-color: var(--color-cream);
+  overflow: hidden;
+}
+
+/* --- Header --- */
+.events__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.events__surtitle {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-ultra);
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.events__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: var(--fw-bold);
+  color: var(--color-anthracite);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--space-sm);
+}
+
+.events__subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  font-weight: var(--fw-regular);
+  color: var(--color-anthracite-soft);
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+/* --- Horizontal scroll wrapper --- */
+.events__scroll {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--space-xs);
+}
+
+.events__scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Card --- */
+.events__card {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition:
+    transform var(--duration-normal) var(--ease-smooth),
+    box-shadow var(--duration-normal) var(--ease-smooth);
+}
+
+.events__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* --- Card image --- */
+.events__card-visual {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.events__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-smooth);
+}
+
+.events__card:hover .events__card-img {
+  transform: scale(1.04);
+}
+
+/* Badge on image */
+.events__card-badge {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.events__card-badge--thisweek {
+  background: rgba(196, 112, 75, 0.9);
+  color: var(--color-white);
+}
+
+.events__card-badge--upcoming {
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--color-anthracite);
+}
+
+.events__card-badge--recurrent {
+  background: rgba(44, 74, 62, 0.88);
+  color: var(--color-white);
+}
+
+/* Date chip on image */
+.events__card-date {
+  position: absolute;
+  bottom: var(--space-sm);
+  right: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 6px 12px;
+  min-width: 54px;
+  box-shadow: var(--shadow-sm);
+}
+
+.events__card-date-day {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  line-height: 1;
+}
+
+.events__card-date-num {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-anthracite);
+  line-height: 1.1;
+}
+
+.events__card-date-month {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-anthracite-soft);
+  line-height: 1;
+}
+
+/* Recurrent: show label instead of date */
+.events__card-date--recurrent .events__card-date-num {
+  font-size: var(--fs-sm);
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+}
+
+/* --- Card body --- */
+.events__card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--space-md);
+  gap: 8px;
+}
+
+.events__card-time {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+}
+
+.events__card-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--color-anthracite);
+  line-height: var(--lh-snug);
+}
+
+.events__card-desc {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  color: var(--color-anthracite-soft);
+  line-height: var(--lh-normal);
+  flex: 1;
+}
+
+.events__card-cta {
+  margin-top: auto;
+  padding-top: var(--space-sm);
+}
+
+.events__card-cta .btn {
+  width: 100%;
+  font-size: var(--fs-xs);
+  padding: 0.7rem 1.5rem;
+}
+
+/* --- Footer: Instagram link --- */
+.events__footer {
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+
+.events__insta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-anthracite-soft);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.events__insta-link:hover {
+  color: var(--color-terracotta);
+}
+
+.events__insta-link svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+}
+
+/* ============================================
+   REVEAL
+   ============================================ */
+
+.events [data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s var(--ease-smooth),
+    transform 0.7s var(--ease-smooth);
+}
+
+.events [data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Small screens: cards slightly smaller */
+@media (max-width: 479px) {
+  .events__card {
+    flex: 0 0 270px;
+  }
+
+  .events__card-visual {
+    height: 170px;
+  }
+}
+
+/* Tablet+: grid layout instead of scroll */
+@media (min-width: 768px) {
+  .events__scroll {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .events__card {
+    flex: auto;
+  }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+  .events__scroll {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .events [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .events__card:hover {
+    transform: none;
+  }
+
+  .events__card-img {
+    transition: none;
+  }
+}

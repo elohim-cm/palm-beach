@@ -1,0 +1,294 @@
+/* ============================================
+   MENU / CARTE — Tabs + Item list
+   ============================================ */
+
+.menu {
+  padding: var(--section-padding) 0;
+  background-color: var(--color-sand-light);
+  overflow: hidden;
+}
+
+/* --- Section header --- */
+.menu__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.menu__surtitle {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-ultra);
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.menu__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: var(--fw-bold);
+  color: var(--color-anthracite);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--space-sm);
+}
+
+.menu__subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  font-weight: var(--fw-regular);
+  color: var(--color-anthracite-soft);
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+/* --- Tabs --- */
+.menu__tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: var(--space-xl);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+  justify-content: flex-start;
+}
+
+.menu__tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.menu__tab {
+  flex-shrink: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-anthracite-soft);
+  padding: 0.65rem 1.3rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid transparent;
+  background: transparent;
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+  white-space: nowrap;
+}
+
+.menu__tab:hover {
+  color: var(--color-anthracite);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.menu__tab.active {
+  color: var(--color-white);
+  background-color: var(--color-anthracite);
+  border-color: var(--color-anthracite);
+}
+
+/* --- Tab panels --- */
+.menu__panel {
+  display: none;
+}
+
+.menu__panel.active {
+  display: block;
+  animation: menuFadeIn 0.35s var(--ease-smooth);
+}
+
+@keyframes menuFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Items list --- */
+.menu__items {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Single item */
+.menu__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.menu__item:last-child {
+  border-bottom: none;
+}
+
+/* Item top row: name + dots + price */
+.menu__item-row {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  gap: 8px;
+}
+
+.menu__item-name {
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--color-anthracite);
+  flex-shrink: 0;
+}
+
+/* Dotted leader between name and price */
+.menu__item-dots {
+  flex: 1;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
+  min-width: 20px;
+  margin-bottom: 4px;
+}
+
+.menu__item-price {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  color: var(--color-terracotta);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.menu__item-unit {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+  color: var(--color-anthracite-soft);
+  margin-left: 2px;
+}
+
+/* Description */
+.menu__item-desc {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  color: var(--color-anthracite-soft);
+  line-height: var(--lh-normal);
+  margin-top: 4px;
+  padding-right: var(--space-lg);
+}
+
+/* Signature badge */
+.menu__item-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  background: rgba(196, 112, 75, 0.1);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  margin-left: 8px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.menu__item-badge svg {
+  width: 10px;
+  height: 10px;
+  fill: var(--color-terracotta);
+}
+
+/* --- Footer CTAs --- */
+.menu__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-2xl);
+  text-align: center;
+}
+
+.menu__pdf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-anthracite-soft);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  padding: 0.7rem 1.5rem;
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-full);
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) var(--ease-out);
+}
+
+.menu__pdf-link:hover {
+  color: var(--color-anthracite);
+  border-color: var(--color-anthracite);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.menu__pdf-link svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* --- Reveal --- */
+.menu [data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s var(--ease-smooth),
+    transform 0.7s var(--ease-smooth);
+}
+
+.menu [data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (min-width: 480px) {
+  .menu__footer {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu__tabs {
+    justify-content: center;
+  }
+
+  .menu__tab {
+    font-size: var(--fs-sm);
+    padding: 0.7rem 1.6rem;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .menu [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .menu__panel.active {
+    animation: none;
+  }
+}

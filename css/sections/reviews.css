@@ -1,0 +1,229 @@
+/* ============================================
+   REVIEWS — Social proof, carousel
+   ============================================ */
+
+.reviews {
+  padding: var(--section-padding) 0;
+  background-color: var(--color-green-deep);
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+/* --- Header --- */
+.reviews__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.reviews__surtitle {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-ultra);
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.reviews__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--space-md);
+}
+
+/* Aggregate rating */
+.reviews__aggregate {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.reviews__aggregate-score {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+}
+
+.reviews__aggregate-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.reviews__aggregate-stars svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-terracotta);
+}
+
+/* --- Track (scroll container) --- */
+.reviews__track {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--space-xs);
+}
+
+.reviews__track::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Single card --- */
+.reviews__card {
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  scroll-snap-align: start;
+  transition:
+    background-color var(--duration-normal) var(--ease-smooth),
+    border-color var(--duration-normal) var(--ease-smooth);
+}
+
+.reviews__card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Quote mark */
+.reviews__quote {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--color-terracotta);
+  opacity: 0.5;
+  margin-bottom: -8px;
+  user-select: none;
+}
+
+/* Review text */
+.reviews__text {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  color: rgba(255, 255, 255, 0.78);
+  line-height: var(--lh-normal);
+  flex: 1;
+  margin-bottom: var(--space-md);
+}
+
+/* Stars row */
+.reviews__stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: var(--space-sm);
+}
+
+.reviews__star {
+  width: 14px;
+  height: 14px;
+}
+
+.reviews__star--filled {
+  fill: var(--color-terracotta);
+}
+
+.reviews__star--empty {
+  fill: rgba(255, 255, 255, 0.15);
+}
+
+/* Author */
+.reviews__author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.reviews__author-name {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-white);
+}
+
+.reviews__author-source {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: var(--ls-wide);
+}
+
+/* --- CTA --- */
+.reviews__cta {
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+
+/* --- Reveal --- */
+.reviews [data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s var(--ease-smooth),
+    transform 0.7s var(--ease-smooth);
+}
+
+.reviews [data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 479px) {
+  .reviews__card {
+    flex: 0 0 280px;
+    padding: var(--space-md);
+  }
+}
+
+/* Tablet: grid 2 cols */
+@media (min-width: 768px) {
+  .reviews__track {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .reviews__card {
+    flex: auto;
+  }
+}
+
+/* Desktop: grid 3 cols */
+@media (min-width: 1024px) {
+  .reviews__track {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .reviews [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

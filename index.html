@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Palm Beach — Rooftop lounge & terrasse premium. Cocktails signature, DJ sets, couchers de soleil et ambiance tropicale d'exception.">
+  <meta name="theme-color" content="#1A1A1A">
+  <title>Palm Beach — Rooftop Lounge & Terrasse</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/sections/header.css">
+  <link rel="stylesheet" href="css/sections/hero.css">
+  <link rel="stylesheet" href="css/sections/concept.css">
+  <link rel="stylesheet" href="css/sections/features.css">
+  <link rel="stylesheet" href="css/sections/menu.css">
+  <link rel="stylesheet" href="css/sections/gallery.css">
+  <link rel="stylesheet" href="css/sections/events.css">
+  <link rel="stylesheet" href="css/sections/privatisation.css">
+  <link rel="stylesheet" href="css/sections/reviews.css">
+  <link rel="stylesheet" href="css/sections/info.css">
+  <link rel="stylesheet" href="css/sections/footer.css">
+
+  <!-- JS -->
+  <script src="js/navigation.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/events.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header" role="banner">
+    <div class="header__inner container">
+
+      <!-- Logo -->
+      <a href="#" class="header__logo" aria-label="Palm Beach — Retour a l'accueil">
+        <span class="header__logo-name">Palm Beach</span>
+        <span class="header__logo-tagline">Rooftop Lounge</span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="header__nav" id="header-nav" role="navigation" aria-label="Navigation principale">
+        <ul class="header__nav-list">
+          <li><a href="#concept" class="header__nav-link" data-nav-link>Concept</a></li>
+          <li><a href="#carte" class="header__nav-link" data-nav-link>Carte</a></li>
+          <li><a href="#galerie" class="header__nav-link" data-nav-link>Galerie</a></li>
+          <li><a href="#events" class="header__nav-link" data-nav-link>Events</a></li>
+          <li><a href="#privatiser" class="header__nav-link" data-nav-link>Privatiser</a></li>
+          <li><a href="#contact" class="header__nav-link" data-nav-link>Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA Reservation -->
+      <a href="#reservation" class="btn btn-primary header__cta">Reserver</a>
+
+      <!-- Burger (mobile) -->
+      <button
+        class="header__burger"
+        id="burger-btn"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav class="mobile-menu__nav" aria-label="Navigation mobile">
+        <ul class="mobile-menu__list">
+          <li><a href="#concept" class="mobile-menu__link" data-nav-link>Concept</a></li>
+          <li><a href="#carte" class="mobile-menu__link" data-nav-link>Carte</a></li>
+          <li><a href="#galerie" class="mobile-menu__link" data-nav-link>Galerie</a></li>
+          <li><a href="#events" class="mobile-menu__link" data-nav-link>Events</a></li>
+          <li><a href="#privatiser" class="mobile-menu__link" data-nav-link>Privatiser</a></li>
+          <li><a href="#contact" class="mobile-menu__link" data-nav-link>Contact</a></li>
+        </ul>
+        <a href="#reservation" class="btn btn-primary mobile-menu__cta" data-nav-link>Reserver une table</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+
+    <!-- Background: swap <img> for <video> when ready -->
+    <!--
+      Replace src with your actual hero image.
+      Recommended: 1920x1080 minimum, sunset/golden hour rooftop shot.
+      For video: replace <img> with:
+      <video class="hero__media hero__media--animate" autoplay muted loop playsinline poster="assets/images/hero/hero-poster.jpg">
+        <source src="assets/images/hero/hero.mp4" type="video/mp4">
+      </video>
+    -->
+    <img
+      class="hero__media hero__media--animate"
+      src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1920&q=80"
+      alt="Vue panoramique de la terrasse Palm Beach au coucher du soleil"
+      fetchpriority="high"
+    >
+
+    <!-- Overlays -->
+    <div class="hero__overlay hero__overlay--tint" aria-hidden="true"></div>
+    <div class="hero__overlay hero__overlay--gradient" aria-hidden="true"></div>
+
+    <!-- Content -->
+    <div class="hero__content">
+      <div class="hero__ornament" aria-hidden="true"></div>
+
+      <h1 class="hero__title">Palm Beach</h1>
+
+      <p class="hero__tagline">La ou le soleil rencontre l'elegance</p>
+
+      <p class="hero__subtitle">
+        <span>Terrasse rooftop</span>
+        <span class="hero__sep" aria-hidden="true">&mdash;</span>
+        <span>Cocktails signature</span>
+        <span class="hero__sep" aria-hidden="true">&mdash;</span>
+        <span>DJ sets au coucher du soleil</span>
+      </p>
+
+      <div class="hero__ctas">
+        <a href="#reservation" class="btn btn-primary hero__cta-primary">Reserver une table</a>
+        <a href="#concept" class="btn btn-outline hero__cta-secondary">Decouvrir le lieu</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#concept" class="hero__scroll" aria-label="Defiler vers le contenu">
+      <span>Explorer</span>
+      <span class="hero__scroll-line" aria-hidden="true"></span>
+    </a>
+
+  </section>
+
+  <!-- ========== CONCEPT / ADN ========== -->
+  <section class="concept" id="concept">
+    <div class="container">
+
+      <!-- Storytelling: image + text -->
+      <div class="concept__story">
+
+        <!-- Image -->
+        <div class="concept__image-wrapper" data-reveal="left">
+          <img
+            class="concept__image"
+            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+            alt="Terrasse vegetalisee du Palm Beach baignee de lumiere doree"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- Text -->
+        <div class="concept__text" data-reveal="right">
+          <span class="concept__surtitle">Notre ADN</span>
+
+          <h2 class="concept__title">
+            Un rooftop ne dans<br>la <em>lumiere du sud</em>
+          </h2>
+
+          <p class="concept__description">
+            Palm Beach n'est pas un bar de plus. C'est une parenthese suspendue entre ciel et mer, ou chaque detail a ete pense pour eveiller les sens. La vegetation tropicale se mele au bois brut, les cocktails sont crees comme des oeuvres, et la musique accompagne le soleil jusqu'a ce qu'il disparaisse a l'horizon.
+          </p>
+
+          <p class="concept__description">
+            Ici, on ne vient pas simplement boire un verre. On vient vivre un moment.
+          </p>
+
+          <span class="concept__signature">&mdash; L'equipe Palm Beach</span>
+        </div>
+
+      </div>
+
+      <!-- 4 Pillars -->
+      <div class="concept__pillars">
+
+        <!-- Pillar 1: Ambiance -->
+        <div class="concept__pillar" data-reveal data-reveal-delay="1">
+          <div class="concept__pillar-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+          </div>
+          <h3 class="concept__pillar-title">Golden Hour</h3>
+          <p class="concept__pillar-text">
+            Un coucher de soleil en premiere loge, chaque soir. La lumiere ici n'est pas un decor, c'est l'experience.
+          </p>
+        </div>
+
+        <!-- Pillar 2: Cocktails -->
+        <div class="concept__pillar" data-reveal data-reveal-delay="2">
+          <div class="concept__pillar-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2h8l-4 9-4-9z" transform="translate(0,1)"/>
+              <path d="M12 12v7"/>
+              <path d="M8 22h8"/>
+              <path d="M5 3h14"/>
+            </svg>
+          </div>
+          <h3 class="concept__pillar-title">Cocktails d'auteur</h3>
+          <p class="concept__pillar-text">
+            Des creations originales, des produits frais, des saveurs qui voyagent. Chaque verre raconte une histoire.
+          </p>
+        </div>
+
+        <!-- Pillar 3: Musique -->
+        <div class="concept__pillar" data-reveal data-reveal-delay="3">
+          <div class="concept__pillar-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18V5l12-2v13"/>
+              <circle cx="6" cy="18" r="3"/>
+              <circle cx="18" cy="16" r="3"/>
+            </svg>
+          </div>
+          <h3 class="concept__pillar-title">Son & vibrations</h3>
+          <p class="concept__pillar-text">
+            Deep house, afro, tropical. Nos DJs posent le tempo de vos soirees avec une programmation soignee.
+          </p>
+        </div>
+
+        <!-- Pillar 4: Cadre -->
+        <div class="concept__pillar" data-reveal data-reveal-delay="4">
+          <div class="concept__pillar-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22c-4.97 0-9-2.69-9-6v-4"/>
+              <path d="M12 22c4.97 0 9-2.69 9-6v-4"/>
+              <path d="M12 14c-4.97 0-9-2.69-9-6s4.03-6 9-6 9 2.69 9 6-4.03 6-9 6z"/>
+              <path d="M3 12c0 3.31 4.03 6 9 6s9-2.69 9-6"/>
+            </svg>
+          </div>
+          <h3 class="concept__pillar-title">Ecrin vegetal</h3>
+          <p class="concept__pillar-text">
+            Palmiers, bougainvilliers, bois naturel. Un cadre tropical pense comme un jardin suspendu au-dessus de la ville.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== FEATURES — Pourquoi venir ========== -->
+  <section class="features" id="pourquoi">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="features__header" data-reveal>
+        <span class="features__surtitle">Pourquoi Palm Beach</span>
+        <h2 class="features__title">L'endroit ou chaque detail<br>fait la difference</h2>
+        <p class="features__subtitle">Six raisons de nous rejoindre ce soir.</p>
+      </div>
+
+      <!-- Grid: 6 stat-cards -->
+      <div class="features__grid">
+
+        <div class="features__card" data-reveal data-reveal-delay="1">
+          <span class="features__card-accent" data-count="360" data-count-suffix="°">360°</span>
+          <h3 class="features__card-title">Vue panoramique</h3>
+          <p class="features__card-text">Une terrasse ouverte sur le ciel, la mer et les toits de la ville.</p>
+        </div>
+
+        <div class="features__card" data-reveal data-reveal-delay="2">
+          <span class="features__card-accent" data-count="40" data-count-prefix="+">+40</span>
+          <h3 class="features__card-title">Cocktails signature</h3>
+          <p class="features__card-text">Une carte creative, des produits frais, renouvelee chaque saison.</p>
+        </div>
+
+        <div class="features__card" data-reveal data-reveal-delay="3">
+          <span class="features__card-accent">Live</span>
+          <h3 class="features__card-title">DJ sets & musique live</h3>
+          <p class="features__card-text">Programmation curatee chaque week-end, du sunset a la nuit.</p>
+        </div>
+
+        <div class="features__card" data-reveal data-reveal-delay="4">
+          <span class="features__card-accent">7j/7</span>
+          <h3 class="features__card-title">Open air toute la saison</h3>
+          <p class="features__card-text">Du mardi au dimanche, de l'aperitif dore jusqu'au bout de la nuit.</p>
+        </div>
+
+        <div class="features__card" data-reveal data-reveal-delay="5">
+          <span class="features__card-accent">#1</span>
+          <h3 class="features__card-title">Spot le plus photogenique</h3>
+          <p class="features__card-text">Le cadre le plus instagrammable de la cote. Votre feed va nous remercier.</p>
+        </div>
+
+        <div class="features__card" data-reveal data-reveal-delay="6">
+          <span class="features__card-accent" data-count="100" data-count-suffix="%">100%</span>
+          <h3 class="features__card-title">Privatisable</h3>
+          <p class="features__card-text">Anniversaires, corporate, soirees privees. Un lieu entierement a vous.</p>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="features__cta" data-reveal>
+        <a href="#reservation" class="btn btn-primary">Reserver une table</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== MENU / CARTE ========== -->
+  <section class="menu" id="carte">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="menu__header" data-reveal>
+        <span class="menu__surtitle">Notre carte</span>
+        <h2 class="menu__title">Des creations qui voyagent,<br>des classiques magnifies</h2>
+        <p class="menu__subtitle">Produits frais, recettes d'auteur, carte renouvelee chaque saison.</p>
+      </div>
+
+      <!-- Tabs (rendered by JS from menu.json) -->
+      <div class="menu__tabs" id="menu-tabs" role="tablist" aria-label="Categories de la carte" data-reveal></div>
+
+      <!-- Panels (rendered by JS from menu.json) -->
+      <div id="menu-panels" data-reveal></div>
+
+      <!-- Footer: PDF + CTA -->
+      <div class="menu__footer" data-reveal>
+        <a href="assets/palm-beach-carte.pdf" class="menu__pdf-link" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="12" y1="18" x2="12" y2="12"/>
+            <polyline points="9 15 12 18 15 15"/>
+          </svg>
+          Telecharger la carte PDF
+        </a>
+        <a href="#reservation" class="btn btn-primary">Reserver une table</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== GALERIE ========== -->
+  <section class="gallery" id="galerie">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="gallery__header" data-reveal>
+        <span class="gallery__surtitle">Galerie</span>
+        <h2 class="gallery__title">L'experience en images</h2>
+        <p class="gallery__subtitle">Chaque soir, une nouvelle lumiere. Chaque visite, un nouveau souvenir.</p>
+      </div>
+
+      <!-- Grid: 8 images, asymmetric layout -->
+      <div class="gallery__grid">
+
+        <!-- 1: Tall — vue terrasse -->
+        <div class="gallery__item gallery__item--tall" data-gallery data-caption="La terrasse au golden hour" tabindex="0" data-reveal data-reveal-delay="1">
+          <img
+            class="gallery__item-img"
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=75"
+            alt="Vue de la terrasse Palm Beach au coucher du soleil"
+            loading="lazy"
+          >
+          <div class="gallery__item-overlay" aria-hidden="true">
+            <span class="gallery__item-caption">La terrasse au golden hour</span>
+          </div>
+        </div>
+
+        <!-- 2: Normal — cocktail -->
+        <div class="gallery__item" data-gallery data-caption="Cocktails signature" tabindex="0" data-reveal data-reveal-delay="2">
+          <img
+            class="gallery__item-img"
+            src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=75"
+            alt="Cocktail signature du Palm Beach"
+            loading="lazy"
+          >
+          <div class="gallery__item-overlay" aria-hidden="true">
+            <span class="gallery__item-caption">Cocktails signature</span>
+          </div>
+        </div>
+
+        <!-- 3: Normal — details deco -->
+        <div class="gallery__item" data-gallery data-caption="Details & decoration" tabindex="0" data-reveal data-reveal-delay="3">
+          <img
+            class="gallery__item-img"
+            src="https://images.unsplash.com/photo-1525268323446-0505b6fe7778?auto=format&fit=crop&w=400&q=75"
+            alt="Details de la decoration tropicale"
+            loading="lazy"
+          >
+          <div class="gallery__item-overlay" aria-hidden="true">
+            <span class="gallery__item-caption">Details & decoration</span>
+          </div>
+        </div>
+
+        <!-- 4: Normal — plat -->
+        <div class="gallery__item" data-gallery data-caption="A partager entre amis" tabindex="0" data-reveal data-reveal-delay="4">
+          <img
+            class="gallery__item-img"
+            src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=75"
+            alt="Planche a partager entre amis"
+            loading="lazy"
+          >
+          <div class="gallery__item-overlay" aria-hidden="true">
+            <span class="gallery__item-caption">A partager entre amis</span>
+          </div>
+        </div>
+
+        <!-- 5: Tall — ambiance soiree -->
+        <div class="gallery__item gallery__item--tall" data-gallery data-caption="L'ambiance du soir" tabindex="0" data-reveal data-reveal-delay="5">
+          <img
+            class="gallery__item-img"
+            src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=600&q=75"
+            alt="Ambiance de soiree au Palm Beach"
+            loading="lazy"
+          >
+          <div class="gallery__item-overlay" aria-hidden="true">
+            <span class="gallery__item-caption">L'ambiance du soir</span>
+          </div>
+        </div>
+
+        <!-- 6: Normal — bar -->
+        <div class="gallery__item" data-gallery data-caption="Le bar" tabindex="0" data-reveal data-reveal-delay="6">
+          <img
+            class="gallery__item-img"
+            src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=400&q=75"
+            alt="Le comptoir du bar Palm Beach"
+            loading="lazy"
+          >
+          <div class="gallery__item-overlay" aria-hidden="true">
+            <span class="gallery__item-caption">Le bar</span>
+          </div>
+        </div>
+
+        <!-- 7: Wide — panorama -->
+        <div class="gallery__item gallery__item--wide" data-gallery data-caption="Vue panoramique au sunset" tabindex="0" data-reveal data-reveal-delay="7">
+          <img
+            class="gallery__item-img"
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=75"
+            alt="Vue panoramique depuis le rooftop au sunset"
+            loading="lazy"
+          >
+          <div class="gallery__item-overlay" aria-hidden="true">
+            <span class="gallery__item-caption">Vue panoramique au sunset</span>
+          </div>
+        </div>
+
+        <!-- 8: Normal — vie du lieu -->
+        <div class="gallery__item" data-gallery data-caption="La vie du lieu" tabindex="0" data-reveal data-reveal-delay="8">
+          <img
+            class="gallery__item-img"
+            src="https://images.unsplash.com/photo-1528495612343-9ca9f4a4de28?auto=format&fit=crop&w=400&q=75"
+            alt="Clients profitant de l'ambiance Palm Beach"
+            loading="lazy"
+          >
+          <div class="gallery__item-overlay" aria-hidden="true">
+            <span class="gallery__item-caption">La vie du lieu</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX (shared, outside sections) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse de photos">
+    <!-- Counter -->
+    <span class="lightbox__counter" id="lightbox-counter" aria-live="polite"></span>
+
+    <!-- Close -->
+    <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+
+    <!-- Nav -->
+    <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" type="button" aria-label="Photo precedente">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" type="button" aria-label="Photo suivante">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 6 15 12 9 18"/>
+      </svg>
+    </button>
+
+    <!-- Image -->
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+
+    <!-- Caption -->
+    <span class="lightbox__caption" id="lightbox-caption"></span>
+  </div>
+
+  <!-- ========== EVENTS / PROGRAMMATION ========== -->
+  <section class="events" id="events">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="events__header" data-reveal>
+        <span class="events__surtitle">Programmation</span>
+        <h2 class="events__title">Ce qui vous attend<br>au Palm Beach</h2>
+        <p class="events__subtitle">Soirees a theme, DJ sets, happy hours et brunchs. Il se passe toujours quelque chose ici.</p>
+      </div>
+
+      <!-- Cards (rendered by JS from events.json) -->
+      <div class="events__scroll" id="events-list"></div>
+
+      <!-- Footer: Instagram -->
+      <div class="events__footer" data-reveal>
+        <a href="https://instagram.com/palmbeach" target="_blank" rel="noopener" class="events__insta-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          Suivez toute la programmation sur @palmbeach
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- ========== PRIVATISATION ========== -->
+  <section class="privatisation" id="privatiser">
+    <div class="container">
+
+      <!-- Hero split: image + pitch -->
+      <div class="privatisation__hero">
+
+        <!-- Image -->
+        <div class="privatisation__image-wrapper" data-reveal="left">
+          <img
+            class="privatisation__image"
+            src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80"
+            alt="Soiree privee en terrasse au Palm Beach"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- Pitch -->
+        <div class="privatisation__pitch" data-reveal="right">
+          <span class="privatisation__surtitle">Privatisation</span>
+
+          <h2 class="privatisation__title">
+            Votre evenement,<br>notre <em>cadre d'exception</em>
+          </h2>
+
+          <p class="privatisation__desc">
+            Offrez a vos invites un moment inoubliable. Le Palm Beach se transforme en ecrin prive pour vos celebrations les plus ambitieuses. De l'aperitif au bout de la nuit, chaque detail est orchestre pour vous.
+          </p>
+
+          <ul class="privatisation__checklist">
+            <li class="privatisation__check">
+              <span class="privatisation__check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Terrasse privatisable en totalite ou en partie
+            </li>
+            <li class="privatisation__check">
+              <span class="privatisation__check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Formules cocktails et food sur mesure
+            </li>
+            <li class="privatisation__check">
+              <span class="privatisation__check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              DJ et ambiance musicale personnalisee
+            </li>
+            <li class="privatisation__check">
+              <span class="privatisation__check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              De 20 a 200 personnes
+            </li>
+            <li class="privatisation__check">
+              <span class="privatisation__check-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Interlocuteur dedie du devis au jour J
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Occasions tags -->
+      <div class="privatisation__occasions" data-reveal>
+        <span class="privatisation__tag">
+          <span class="privatisation__tag-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-3-3.87M4 21v-2a4 4 0 0 1 3-3.87"/><circle cx="12" cy="7" r="4"/></svg>
+          </span>
+          Anniversaires
+        </span>
+        <span class="privatisation__tag">
+          <span class="privatisation__tag-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </span>
+          Afterworks
+        </span>
+        <span class="privatisation__tag">
+          <span class="privatisation__tag-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          Seminaires & corporate
+        </span>
+        <span class="privatisation__tag">
+          <span class="privatisation__tag-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8l-4 9-4-9z" transform="translate(0,1)"/><path d="M12 12v7"/><path d="M8 22h8"/><path d="M5 3h14"/></svg>
+          </span>
+          Cocktails prives
+        </span>
+        <span class="privatisation__tag">
+          <span class="privatisation__tag-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          Soirees de groupe
+        </span>
+      </div>
+
+      <!-- Contact form -->
+      <div class="privatisation__form-wrapper" data-reveal>
+        <h3 class="privatisation__form-title">Demandez votre devis personnalise</h3>
+        <p class="privatisation__form-subtitle">Reponse sous 24h. Sans engagement.</p>
+
+        <form class="privatisation__form" action="#" method="POST" id="privatisation-form">
+
+          <div class="privatisation__field">
+            <label class="privatisation__label" for="priv-name">Nom complet</label>
+            <input class="privatisation__input" type="text" id="priv-name" name="name" placeholder="Votre nom" required autocomplete="name">
+          </div>
+
+          <div class="privatisation__field">
+            <label class="privatisation__label" for="priv-email">Email</label>
+            <input class="privatisation__input" type="email" id="priv-email" name="email" placeholder="votre@email.com" required autocomplete="email">
+          </div>
+
+          <div class="privatisation__field">
+            <label class="privatisation__label" for="priv-type">Type d'evenement</label>
+            <select class="privatisation__select" id="priv-type" name="event_type" required>
+              <option value="" disabled selected>Choisir...</option>
+              <option value="anniversaire">Anniversaire</option>
+              <option value="afterwork">Afterwork</option>
+              <option value="corporate">Seminaire / Corporate</option>
+              <option value="cocktail">Cocktail prive</option>
+              <option value="groupe">Soiree de groupe</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="privatisation__field">
+            <label class="privatisation__label" for="priv-guests">Nombre de personnes</label>
+            <input class="privatisation__input" type="number" id="priv-guests" name="guests" placeholder="Ex: 50" min="10" max="300" required>
+          </div>
+
+          <div class="privatisation__field privatisation__field--full">
+            <label class="privatisation__label" for="priv-message">Votre projet en quelques mots</label>
+            <textarea class="privatisation__textarea" id="priv-message" name="message" placeholder="Date souhaitee, ambiance, details particuliers..." rows="4"></textarea>
+          </div>
+
+          <div class="privatisation__submit">
+            <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
+            <span class="privatisation__or">ou</span>
+            <a href="https://wa.me/33600000000?text=Bonjour%2C%20je%20souhaite%20privatiser%20le%20Palm%20Beach." target="_blank" rel="noopener" class="privatisation__whatsapp">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.522 5.857L0 24l6.335-1.652A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82a9.796 9.796 0 0 1-5.16-1.46l-.37-.22-3.76.98.99-3.64-.24-.38A9.8 9.8 0 1 1 21.82 12 9.82 9.82 0 0 1 12 21.82z"/>
+              </svg>
+              Contacter par WhatsApp
+            </a>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+  <!-- ========== AVIS CLIENTS ========== -->
+  <section class="reviews" id="avis">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="reviews__header" data-reveal>
+        <span class="reviews__surtitle">Ils en parlent</span>
+        <h2 class="reviews__title">Ce que nos visiteurs disent de nous</h2>
+        <div class="reviews__aggregate">
+          <span class="reviews__aggregate-score">4.8</span>
+          <span class="reviews__aggregate-stars" aria-label="4.8 etoiles sur 5">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          </span>
+          <span>sur Google &mdash; 320+ avis</span>
+        </div>
+      </div>
+
+      <!-- Reviews track -->
+      <div class="reviews__track">
+
+        <!-- Review 1 -->
+        <article class="reviews__card" data-reveal="scale" data-reveal-delay="1">
+          <span class="reviews__quote" aria-hidden="true">&ldquo;</span>
+          <p class="reviews__text">L'endroit le plus magique de la cote. On a reserve pour un verre, on est restes toute la soiree. Les cocktails sont incroyables et le coucher de soleil depuis la terrasse, inoubliable.</p>
+          <div class="reviews__stars" aria-label="5 etoiles sur 5">
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          </div>
+          <div class="reviews__author">
+            <span class="reviews__author-name">Sophie M.</span>
+            <span class="reviews__author-source">Google</span>
+          </div>
+        </article>
+
+        <!-- Review 2 -->
+        <article class="reviews__card" data-reveal="scale" data-reveal-delay="2">
+          <span class="reviews__quote" aria-hidden="true">&ldquo;</span>
+          <p class="reviews__text">Ambiance parfaite pour un afterwork. Le DJ etait au top, le service impeccable et le cadre juste dingue. On y retourne vendredi.</p>
+          <div class="reviews__stars" aria-label="5 etoiles sur 5">
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          </div>
+          <div class="reviews__author">
+            <span class="reviews__author-name">Antoine R.</span>
+            <span class="reviews__author-source">TripAdvisor</span>
+          </div>
+        </article>
+
+        <!-- Review 3 -->
+        <article class="reviews__card" data-reveal="scale" data-reveal-delay="3">
+          <span class="reviews__quote" aria-hidden="true">&ldquo;</span>
+          <p class="reviews__text">J'ai privatise le Palm Beach pour mes 30 ans. L'equipe a ete aux petits soins du debut a la fin. Mes invites en parlent encore. Merci !</p>
+          <div class="reviews__stars" aria-label="5 etoiles sur 5">
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          </div>
+          <div class="reviews__author">
+            <span class="reviews__author-name">Clara D.</span>
+            <span class="reviews__author-source">Google</span>
+          </div>
+        </article>
+
+        <!-- Review 4 -->
+        <article class="reviews__card" data-reveal="scale" data-reveal-delay="4">
+          <span class="reviews__quote" aria-hidden="true">&ldquo;</span>
+          <p class="reviews__text">Super cadre, tres photogenique. Les cocktails signature valent le detour, surtout le Tropical Smoke. Seul bemol : difficile d'avoir une table sans reservation le samedi.</p>
+          <div class="reviews__stars" aria-label="4 etoiles sur 5">
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--empty" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          </div>
+          <div class="reviews__author">
+            <span class="reviews__author-name">Maxime L.</span>
+            <span class="reviews__author-source">Google</span>
+          </div>
+        </article>
+
+        <!-- Review 5 -->
+        <article class="reviews__card" data-reveal="scale" data-reveal-delay="5">
+          <span class="reviews__quote" aria-hidden="true">&ldquo;</span>
+          <p class="reviews__text">Le brunch du dimanche est une pepite. Assiettes genereuses, jus frais, et cette vue... Le tout avec un DJ acoustique en fond. Paradis.</p>
+          <div class="reviews__stars" aria-label="5 etoiles sur 5">
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          </div>
+          <div class="reviews__author">
+            <span class="reviews__author-name">Ines B.</span>
+            <span class="reviews__author-source">TripAdvisor</span>
+          </div>
+        </article>
+
+        <!-- Review 6 -->
+        <article class="reviews__card" data-reveal="scale" data-reveal-delay="6">
+          <span class="reviews__quote" aria-hidden="true">&ldquo;</span>
+          <p class="reviews__text">Meilleur rooftop ou j'ai ete en France. L'ambiance, la deco, les cocktails — tout est soigne. On sent que c'est fait avec passion. Bravo.</p>
+          <div class="reviews__stars" aria-label="5 etoiles sur 5">
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="reviews__star reviews__star--filled" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          </div>
+          <div class="reviews__author">
+            <span class="reviews__author-name">Thomas K.</span>
+            <span class="reviews__author-source">Google</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="reviews__cta" data-reveal>
+        <a href="#reservation" class="btn btn-primary">Reserver une table</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== INFOS PRATIQUES ========== -->
+  <section class="info" id="contact">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="info__header" data-reveal>
+        <span class="info__surtitle">Informations pratiques</span>
+        <h2 class="info__title">Nous trouver</h2>
+      </div>
+
+      <!-- Layout: details + map -->
+      <div class="info__layout">
+
+        <!-- Details -->
+        <div class="info__details" data-reveal="left">
+
+          <!-- Address -->
+          <div class="info__block">
+            <div class="info__block-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="info__block-content">
+              <span class="info__block-label">Adresse</span>
+              <span class="info__block-value">12 Avenue de la Plage<br>06400 Cannes</span>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="info__block">
+            <div class="info__block-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="info__block-content">
+              <span class="info__block-label">Horaires</span>
+              <div class="info__hours">
+                <div class="info__hours-row">
+                  <span class="info__hours-days">Mardi &ndash; Jeudi</span>
+                  <span class="info__hours-time">18h &ndash; 01h</span>
+                </div>
+                <div class="info__hours-row">
+                  <span class="info__hours-days">Vendredi &ndash; Samedi</span>
+                  <span class="info__hours-time">18h &ndash; 02h</span>
+                </div>
+                <div class="info__hours-row">
+                  <span class="info__hours-days">Dimanche</span>
+                  <span class="info__hours-time">16h &ndash; 00h</span>
+                </div>
+                <div class="info__hours-row info__hours-row--closed">
+                  <span class="info__hours-days">Lundi</span>
+                  <span class="info__hours-time">Ferme</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phone & Email -->
+          <div class="info__block">
+            <div class="info__block-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="info__block-content">
+              <span class="info__block-label">Contact</span>
+              <span class="info__block-value">
+                <a href="tel:+33600000000">+33 6 00 00 00 00</a><br>
+                <a href="mailto:contact@palmbeach.com">contact@palmbeach.com</a>
+              </span>
+            </div>
+          </div>
+
+          <!-- Socials -->
+          <div class="info__block">
+            <div class="info__block-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </div>
+            <div class="info__block-content">
+              <span class="info__block-label">Suivez-nous</span>
+              <div class="info__socials">
+                <!-- Instagram -->
+                <a href="https://instagram.com/palmbeach" target="_blank" rel="noopener" class="info__social-link" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <!-- TikTok -->
+                <a href="https://tiktok.com/@palmbeach" target="_blank" rel="noopener" class="info__social-link" aria-label="TikTok">
+                  <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                </a>
+                <!-- Facebook -->
+                <a href="https://facebook.com/palmbeach" target="_blank" rel="noopener" class="info__social-link" aria-label="Facebook">
+                  <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/33600000000" target="_blank" rel="noopener" class="info__social-link info__social-link--whatsapp" aria-label="WhatsApp">
+                  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.522 5.857L0 24l6.335-1.652A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82a9.796 9.796 0 0 1-5.16-1.46l-.37-.22-3.76.98.99-3.64-.24-.38A9.8 9.8 0 1 1 21.82 12 9.82 9.82 0 0 1 12 21.82z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Map -->
+        <div class="info__map" data-reveal="right">
+          <!--
+            Replace the placeholder below with your Google Maps embed:
+            <iframe src="https://www.google.com/maps/embed?pb=YOUR_EMBED_ID" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          -->
+          <div class="info__map-placeholder">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Carte Google Maps</span>
+            <a href="https://maps.google.com/?q=Palm+Beach+Cannes" target="_blank" rel="noopener" style="color: var(--color-terracotta);">Ouvrir dans Google Maps</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick actions -->
+      <div class="info__actions" data-reveal>
+        <a href="https://maps.google.com/?q=Palm+Beach+Cannes" target="_blank" rel="noopener" class="info__action">
+          <svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          Itineraire
+        </a>
+        <a href="tel:+33600000000" class="info__action">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Appeler
+        </a>
+        <a href="https://wa.me/33600000000" target="_blank" rel="noopener" class="info__action info__action--whatsapp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.522 5.857L0 24l6.335-1.652A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82a9.796 9.796 0 0 1-5.16-1.46l-.37-.22-3.76.98.99-3.64-.24-.38A9.8 9.8 0 1 1 21.82 12 9.82 9.82 0 0 1 12 21.82z"/></svg>
+          WhatsApp
+        </a>
+        <a href="#reservation" class="info__action info__action--primary">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Reserver
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+
+    <!-- Main footer -->
+    <div class="footer__main">
+      <div class="container">
+
+        <!-- Ornament -->
+        <span class="footer__ornament" aria-hidden="true"></span>
+
+        <!-- 4-column grid -->
+        <div class="footer__grid">
+
+          <!-- Col 1: Brand -->
+          <div class="footer__brand">
+            <div>
+              <span class="footer__logo-name">Palm Beach</span>
+              <span class="footer__logo-tagline">Rooftop Lounge</span>
+            </div>
+            <p class="footer__baseline">&laquo; La ou le soleil rencontre l'elegance &raquo;</p>
+            <div class="footer__socials">
+              <a href="https://instagram.com/palmbeach" target="_blank" rel="noopener" class="footer__social" aria-label="Instagram">
+                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://tiktok.com/@palmbeach" target="_blank" rel="noopener" class="footer__social" aria-label="TikTok">
+                <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+              </a>
+              <a href="https://facebook.com/palmbeach" target="_blank" rel="noopener" class="footer__social" aria-label="Facebook">
+                <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2: Navigation -->
+          <nav aria-label="Navigation footer">
+            <h4 class="footer__col-title">Navigation</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#concept" class="footer__nav-link">Concept</a></li>
+              <li><a href="#carte" class="footer__nav-link">Notre carte</a></li>
+              <li><a href="#galerie" class="footer__nav-link">Galerie</a></li>
+              <li><a href="#events" class="footer__nav-link">Evenements</a></li>
+              <li><a href="#privatiser" class="footer__nav-link">Privatiser</a></li>
+              <li><a href="#contact" class="footer__nav-link">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- Col 3: Contact -->
+          <div>
+            <h4 class="footer__col-title">Contact</h4>
+            <div class="footer__contact-list">
+              <div class="footer__contact-item">
+                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>12 Avenue de la Plage<br>06400 Cannes</span>
+              </div>
+              <div class="footer__contact-item">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <a href="tel:+33600000000">+33 6 00 00 00 00</a>
+              </div>
+              <div class="footer__contact-item">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="mailto:contact@palmbeach.com">contact@palmbeach.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 4: Horaires -->
+          <div>
+            <h4 class="footer__col-title">Horaires</h4>
+            <div class="footer__hours-list">
+              <div class="footer__hours-row">
+                <span class="footer__hours-days">Mar &ndash; Jeu</span>
+                <span class="footer__hours-time">18h &ndash; 01h</span>
+              </div>
+              <div class="footer__hours-row">
+                <span class="footer__hours-days">Ven &ndash; Sam</span>
+                <span class="footer__hours-time">18h &ndash; 02h</span>
+              </div>
+              <div class="footer__hours-row">
+                <span class="footer__hours-days">Dimanche</span>
+                <span class="footer__hours-time">16h &ndash; 00h</span>
+              </div>
+              <div class="footer__hours-row footer__hours-row--closed">
+                <span class="footer__hours-days">Lundi</span>
+                <span class="footer__hours-time">Ferme</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner container">
+        <span class="footer__copy">&copy; 2026 Palm Beach. Tous droits reserves.</span>
+        <div class="footer__legal">
+          <a href="mentions-legales.html" class="footer__legal-link">Mentions legales</a>
+          <a href="confidentialite.html" class="footer__legal-link">Politique de confidentialite</a>
+          <a href="cgv.html" class="footer__legal-link">CGV</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- ========== WHATSAPP FAB ========== -->
+  <a
+    href="https://wa.me/33600000000"
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-fab"
+    aria-label="Nous contacter sur WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.522 5.857L0 24l6.335-1.652A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82a9.796 9.796 0 0 1-5.16-1.46l-.37-.22-3.76.98.99-3.64-.24-.38A9.8 9.8 0 1 1 21.82 12 9.82 9.82 0 0 1 12 21.82z"/>
+    </svg>
+  </a>
+
+</body>
+</html>

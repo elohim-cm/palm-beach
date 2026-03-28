@@ -1,0 +1,366 @@
+/* ============================================
+   PRIVATISATION — Split layout + Form
+   ============================================ */
+
+.privatisation {
+  padding: var(--section-padding) 0;
+  background-color: var(--color-sand-light);
+  overflow: hidden;
+}
+
+/* --- Hero split: image + pitch side by side --- */
+.privatisation__hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+  margin-bottom: var(--space-2xl);
+}
+
+/* Image */
+.privatisation__image-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.privatisation__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dark accent strip on image */
+.privatisation__image-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 18, 15, 0.35) 0%, transparent 50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Pitch text block */
+.privatisation__pitch {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.privatisation__surtitle {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-ultra);
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+}
+
+.privatisation__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: var(--fw-bold);
+  color: var(--color-anthracite);
+  line-height: var(--lh-tight);
+}
+
+.privatisation__title em {
+  font-style: italic;
+  color: var(--color-green-deep);
+}
+
+.privatisation__desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.3vw, 1.08rem);
+  font-weight: var(--fw-regular);
+  color: var(--color-anthracite-soft);
+  line-height: var(--lh-normal);
+  max-width: 520px;
+}
+
+/* Checklist */
+.privatisation__checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: var(--space-xs);
+}
+
+.privatisation__check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-anthracite);
+  line-height: var(--lh-snug);
+}
+
+.privatisation__check-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: var(--color-green-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.privatisation__check-icon svg {
+  width: 12px;
+  height: 12px;
+  stroke: var(--color-white);
+  stroke-width: 2.5;
+  fill: none;
+}
+
+/* --- Occasions tags --- */
+.privatisation__occasions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-2xl);
+}
+
+.privatisation__tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-anthracite);
+  background: var(--color-white);
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--duration-fast) var(--ease-smooth),
+    box-shadow var(--duration-fast) var(--ease-smooth);
+}
+
+.privatisation__tag:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.privatisation__tag-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-terracotta);
+  flex-shrink: 0;
+}
+
+.privatisation__tag-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+}
+
+/* --- Contact form card --- */
+.privatisation__form-wrapper {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.privatisation__form-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--color-anthracite);
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.privatisation__form-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  color: var(--color-anthracite-soft);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.privatisation__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.privatisation__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.privatisation__label {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-anthracite-soft);
+}
+
+.privatisation__input,
+.privatisation__select,
+.privatisation__textarea {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  color: var(--color-anthracite);
+  background: var(--color-sand-light);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+  outline: none;
+  width: 100%;
+}
+
+.privatisation__input::placeholder,
+.privatisation__textarea::placeholder {
+  color: rgba(58, 58, 58, 0.35);
+}
+
+.privatisation__input:focus,
+.privatisation__select:focus,
+.privatisation__textarea:focus {
+  border-color: var(--color-terracotta);
+  box-shadow: 0 0 0 3px rgba(196, 112, 75, 0.12);
+}
+
+.privatisation__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%233A3A3A' stroke-width='1.5'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.privatisation__textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Full-width field (message) */
+.privatisation__field--full {
+  grid-column: 1 / -1;
+}
+
+/* Submit */
+.privatisation__submit {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding-top: var(--space-xs);
+}
+
+.privatisation__submit .btn {
+  min-width: 240px;
+}
+
+.privatisation__or {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  color: var(--color-anthracite-soft);
+}
+
+.privatisation__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-green-deep);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.privatisation__whatsapp:hover {
+  color: var(--color-terracotta);
+}
+
+.privatisation__whatsapp svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* ============================================
+   REVEAL
+   ============================================ */
+
+.privatisation [data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s var(--ease-smooth),
+    transform 0.7s var(--ease-smooth);
+}
+
+.privatisation [data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (min-width: 600px) {
+  .privatisation__form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .privatisation__hero {
+    grid-template-columns: 5fr 7fr;
+    gap: var(--space-2xl);
+  }
+
+  .privatisation__image {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .privatisation__hero {
+    gap: var(--space-3xl);
+  }
+
+  .privatisation__form-wrapper {
+    padding: var(--space-2xl);
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .privatisation [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .privatisation__tag:hover {
+    transform: none;
+  }
+}

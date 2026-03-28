@@ -1,0 +1,26 @@
+{
+  "name": "Palm Beach",
+  "tagline": "Rooftop Lounge & Terrasse",
+  "phone": "+33 6 00 00 00 00",
+  "whatsapp": "https://wa.me/33600000000",
+  "email": "contact@palmbeach.com",
+  "address": {
+    "street": "12 Avenue de la Plage",
+    "city": "Cannes",
+    "zip": "06400"
+  },
+  "googleMapsUrl": "https://maps.google.com/?q=Palm+Beach+Cannes",
+  "googleMapsEmbed": "",
+  "reservationUrl": "#reservation",
+  "hours": [
+    { "days": "Mardi - Jeudi", "hours": "18h - 01h" },
+    { "days": "Vendredi - Samedi", "hours": "18h - 02h" },
+    { "days": "Dimanche", "hours": "16h - 00h" },
+    { "days": "Lundi", "hours": "Ferme" }
+  ],
+  "socials": {
+    "instagram": "https://instagram.com/palmbeach",
+    "tiktok": "https://tiktok.com/@palmbeach",
+    "facebook": "https://facebook.com/palmbeach"
+  }
+}

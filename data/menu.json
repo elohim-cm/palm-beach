@@ -1,0 +1,194 @@
+{
+  "categories": [
+    {
+      "id": "signatures",
+      "name": "Signatures",
+      "icon": "star",
+      "items": [
+        {
+          "name": "Sunset Spritz",
+          "description": "Aperol, prosecco, orange sanguine, romarin frais",
+          "price": "14",
+          "signature": true
+        },
+        {
+          "name": "Tropical Smoke",
+          "description": "Mezcal, fruit de la passion, citron vert fume, piment d'Espelette",
+          "price": "16",
+          "signature": true
+        },
+        {
+          "name": "Palm Sour",
+          "description": "Bourbon, sirop d'orgeat, ananas roti, blanc d'oeuf",
+          "price": "15",
+          "signature": true
+        },
+        {
+          "name": "Jardin Mediterraneen",
+          "description": "Gin infuse basilic, concombre, elderflower, tonic premium",
+          "price": "15",
+          "signature": true
+        },
+        {
+          "name": "Golden Negroni",
+          "description": "Gin, Campari, vermouth blanc, zeste d'orange brule",
+          "price": "16",
+          "signature": true
+        }
+      ]
+    },
+    {
+      "id": "cocktails",
+      "name": "Cocktails",
+      "icon": "glass",
+      "items": [
+        {
+          "name": "Mojito Classique",
+          "description": "Rhum blanc, menthe fraiche, citron vert, sucre de canne",
+          "price": "13",
+          "signature": false
+        },
+        {
+          "name": "Margarita",
+          "description": "Tequila, triple sec, citron vert, sel de Guerande",
+          "price": "14",
+          "signature": false
+        },
+        {
+          "name": "Espresso Martini",
+          "description": "Vodka, Kahlua, espresso frais, mousse onctueuse",
+          "price": "15",
+          "signature": false
+        },
+        {
+          "name": "Daiquiri Framboise",
+          "description": "Rhum blanc, framboises fraiches, citron vert, sirop maison",
+          "price": "14",
+          "signature": false
+        },
+        {
+          "name": "Pina Colada revisitee",
+          "description": "Rhum ambree, coco torrefie, ananas victoria, vanille",
+          "price": "15",
+          "signature": false
+        },
+        {
+          "name": "Aperol Spritz",
+          "description": "Aperol, prosecco, eau gazeuse, orange",
+          "price": "12",
+          "signature": false
+        }
+      ]
+    },
+    {
+      "id": "vins",
+      "name": "Vins & Champagne",
+      "icon": "wine",
+      "items": [
+        {
+          "name": "Rose Cotes de Provence",
+          "description": "Chateau Minuty, frais et mineral",
+          "price": "9",
+          "unit": "verre",
+          "signature": false
+        },
+        {
+          "name": "Rose Prestige — Bouteille",
+          "description": "Domaines Ott, Clos Mireille",
+          "price": "55",
+          "unit": "bouteille",
+          "signature": true
+        },
+        {
+          "name": "Blanc Sancerre",
+          "description": "Domaine Vacheron, vif et agrumes",
+          "price": "10",
+          "unit": "verre",
+          "signature": false
+        },
+        {
+          "name": "Champagne Brut",
+          "description": "Moet & Chandon Imperial",
+          "price": "16",
+          "unit": "coupe",
+          "signature": false
+        },
+        {
+          "name": "Champagne Rose — Bouteille",
+          "description": "Veuve Clicquot Rose",
+          "price": "120",
+          "unit": "bouteille",
+          "signature": true
+        }
+      ]
+    },
+    {
+      "id": "softs",
+      "name": "Softs & Mocktails",
+      "icon": "leaf",
+      "items": [
+        {
+          "name": "Virgin Mojito",
+          "description": "Menthe, citron vert, sucre de canne, eau gazeuse",
+          "price": "8",
+          "signature": false
+        },
+        {
+          "name": "Sunset sans alcool",
+          "description": "Jus d'orange sanguine, tonic, romarin, grenadine maison",
+          "price": "9",
+          "signature": true
+        },
+        {
+          "name": "Limonade maison",
+          "description": "Citron presse, gingembre frais, miel, menthe",
+          "price": "7",
+          "signature": false
+        },
+        {
+          "name": "Jus frais du jour",
+          "description": "Fruits de saison presses a la commande",
+          "price": "7",
+          "signature": false
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "name": "A partager",
+      "icon": "utensils",
+      "items": [
+        {
+          "name": "Planche Mediterraneenne",
+          "description": "Jambon pata negra, burrata, tomates confites, focaccia maison",
+          "price": "24",
+          "signature": true
+        },
+        {
+          "name": "Ceviche du moment",
+          "description": "Poisson frais marine, lait de tigre, avocat, tortilla chips",
+          "price": "18",
+          "signature": true
+        },
+        {
+          "name": "Bruschettas trio",
+          "description": "Tomate-basilic, champignons-truffe, ricotta-miel",
+          "price": "16",
+          "signature": false
+        },
+        {
+          "name": "Olives & Nuts premium",
+          "description": "Olives taggiasche, amandes grillees, romarin, fleur de sel",
+          "price": "8",
+          "signature": false
+        },
+        {
+          "name": "Tacos de thon mi-cuit",
+          "description": "Thon rouge, guacamole, mangue, sauce sriracha-miel",
+          "price": "19",
+          "signature": false
+        }
+      ]
+    }
+  ]
+}

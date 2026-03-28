@@ -1,0 +1,181 @@
+/* ============================================
+   FEATURES — "Pourquoi venir ici"
+   ============================================ */
+
+.features {
+  padding: var(--section-padding) 0;
+  background-color: var(--color-green-deep);
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+/* --- Header --- */
+.features__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.features__surtitle {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-ultra);
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.features__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--space-sm);
+}
+
+.features__subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  font-weight: var(--fw-light);
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* --- Grid --- */
+.features__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+/* --- Single card --- */
+.features__card {
+  position: relative;
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition:
+    background-color var(--duration-normal) var(--ease-smooth),
+    border-color var(--duration-normal) var(--ease-smooth),
+    transform var(--duration-normal) var(--ease-smooth);
+}
+
+.features__card:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+/* Accent number / stat */
+.features__card-accent {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: var(--fw-bold);
+  color: var(--color-terracotta);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+/* Card title */
+.features__card-title {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-bottom: 6px;
+}
+
+/* Card text */
+.features__card-text {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-light);
+  color: rgba(255, 255, 255, 0.55);
+  line-height: var(--lh-normal);
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* --- Bottom CTA --- */
+.features__cta {
+  text-align: center;
+}
+
+/* ============================================
+   REVEAL ANIMATIONS
+   ============================================ */
+
+.features [data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s var(--ease-smooth),
+    transform 0.7s var(--ease-smooth);
+}
+
+.features [data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger cards */
+.features__card:nth-child(1) { transition-delay: 0s; }
+.features__card:nth-child(2) { transition-delay: 0.07s; }
+.features__card:nth-child(3) { transition-delay: 0.14s; }
+.features__card:nth-child(4) { transition-delay: 0.21s; }
+.features__card:nth-child(5) { transition-delay: 0.28s; }
+.features__card:nth-child(6) { transition-delay: 0.35s; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* 2 columns on small tablets */
+@media (min-width: 480px) {
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 columns on tablets */
+@media (min-width: 768px) {
+  .features__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+/* Desktop: tighter cards, more breathing room */
+@media (min-width: 1024px) {
+  .features__grid {
+    gap: var(--space-lg);
+  }
+
+  .features__card {
+    padding: var(--space-xl) var(--space-md);
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .features [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .features__card:hover {
+    transform: none;
+  }
+}
