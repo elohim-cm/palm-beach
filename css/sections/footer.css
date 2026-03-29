@@ -179,6 +179,7 @@
 .footer__hours-row {
   display: flex;
   justify-content: space-between;
+  gap: var(--space-md);
   max-width: 220px;
 }
 
@@ -244,10 +245,89 @@
    RESPONSIVE
    ============================================ */
 
+/* Mobile < 480px */
+@media (max-width: 479px) {
+  .footer__main {
+    padding: var(--space-2xl) 0 var(--space-lg);
+  }
+
+  .footer__ornament {
+    margin-bottom: var(--space-xl);
+  }
+
+  /* Stack as 1 column with visual separators */
+  .footer__grid {
+    gap: 0;
+  }
+
+  .footer__grid > * {
+    padding: var(--space-lg) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .footer__grid > *:first-child {
+    padding-top: 0;
+  }
+
+  .footer__grid > *:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Nav links in 2 columns on mobile */
+  .footer__nav-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  /* Hours full width */
+  .footer__hours-row {
+    max-width: 100%;
+  }
+
+  /* Bottom bar */
+  .footer__bottom {
+    padding: var(--space-md) 0 var(--space-lg);
+  }
+
+  .footer__bottom-inner {
+    gap: 10px;
+  }
+
+  .footer__legal {
+    gap: var(--space-xs) var(--space-sm);
+  }
+
+  .footer__legal-link {
+    font-size: 0.7rem;
+  }
+}
+
 /* Small tablet: 2 columns */
-@media (min-width: 480px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .footer__grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg) var(--space-xl);
+  }
+
+  /* Brand takes full width */
+  .footer__brand {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer__baseline {
+    max-width: none;
+  }
+
+  .footer__hours-row {
+    max-width: 100%;
   }
 }
 

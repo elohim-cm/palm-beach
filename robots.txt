@@ -1,0 +1,7 @@
+# Palm Beach Cannes — robots.txt
+User-agent: *
+Allow: /
+Disallow: /data/
+
+# Sitemap
+Sitemap: https://palmbeach.com/sitemap.xml

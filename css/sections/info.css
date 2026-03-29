@@ -119,6 +119,7 @@
 .info__hours-row {
   display: flex;
   justify-content: space-between;
+  gap: var(--space-md);
   max-width: 280px;
   font-family: var(--font-body);
   font-size: var(--fs-sm);
@@ -316,6 +317,40 @@
    RESPONSIVE
    ============================================ */
 
+/* Mobile < 480px */
+@media (max-width: 479px) {
+  /* Hours: ensure gap between days and time */
+  .info__hours-row {
+    max-width: 100%;
+    gap: var(--space-md);
+  }
+
+  /* Actions: 2x2 grid */
+  .info__actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .info__action {
+    font-size: 0.7rem;
+    padding: 12px 10px;
+    gap: 6px;
+    letter-spacing: 0.04em;
+  }
+
+  .info__action svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Primary action full width */
+  .info__action--primary {
+    grid-column: 1 / -1;
+    padding: 14px var(--space-md);
+    font-size: var(--fs-xs);
+  }
+}
+
 @media (min-width: 480px) {
   .info__actions {
     grid-template-columns: repeat(4, 1fr);
@@ -341,14 +376,6 @@
 @media (min-width: 1024px) {
   .info__layout {
     gap: var(--space-3xl);
-  }
-}
-
-/* Small mobile: stack actions 2x2 */
-@media (max-width: 479px) {
-  .info__action {
-    font-size: var(--fs-xs);
-    padding: 12px var(--space-sm);
   }
 }
 
