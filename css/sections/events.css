@@ -5,7 +5,6 @@
 .events {
   padding: var(--section-padding) 0;
   background-color: var(--color-cream);
-  overflow: hidden;
 }
 
 /* --- Header --- */
@@ -48,10 +47,23 @@
   display: flex;
   gap: var(--space-md);
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
   padding-bottom: var(--space-xs);
+}
+
+/*
+ * Les cartes à l'intérieur d'un scroll overflow-x créent un overflow-y implicite
+ * qui clippe les éléments ayant transform: translateY(32px) (data-reveal).
+ * On annule le transform vertical → seule l'opacité anime (fondu).
+ */
+.events__scroll [data-reveal] {
+  transform: none;
+}
+.events__scroll [data-reveal].revealed {
+  transform: none;
 }
 
 .events__scroll::-webkit-scrollbar {

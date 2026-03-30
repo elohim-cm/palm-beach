@@ -1,18 +1,5 @@
 [
   {
-    "date": "2026-03-28",
-    "endDate": null,
-    "recurrent": false,
-    "title": "Sunset Session — DJ Set",
-    "description": "Deep house & tropical vibes des 19h avec DJ Manu. Ambiance golden hour garantie.",
-    "time": "19h - 01h",
-    "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=75",
-    "cta": {
-      "label": "Reserver",
-      "url": "https://wa.me/237658994705?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach."
-    }
-  },
-  {
     "date": "2026-04-05",
     "endDate": null,
     "recurrent": false,
@@ -22,7 +9,7 @@
     "image": "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=600&q=75",
     "cta": {
       "label": "Reserver",
-      "url": "https://wa.me/237658994705?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach."
+      "url": "https://wa.me/237620897603?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach."
     }
   },
   {
@@ -36,7 +23,7 @@
     "image": "https://images.unsplash.com/photo-1575444758702-4a6b9222c016?auto=format&fit=crop&w=600&q=75",
     "cta": {
       "label": "Reserver",
-      "url": "https://wa.me/237658994705?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach."
+      "url": "https://wa.me/237620897603?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach."
     }
   },
   {
@@ -49,7 +36,7 @@
     "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=75",
     "cta": {
       "label": "Reserver",
-      "url": "https://wa.me/237658994705?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach."
+      "url": "https://wa.me/237620897603?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach."
     }
   },
   {
@@ -63,7 +50,7 @@
     "image": "https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?auto=format&fit=crop&w=600&q=75",
     "cta": {
       "label": "Reserver",
-      "url": "https://wa.me/237658994705?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach."
+      "url": "https://wa.me/237620897603?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach."
     }
   }
 ]

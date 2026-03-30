@@ -279,6 +279,7 @@
 .gallery__grid .gallery__item:nth-child(6)[data-reveal] { transition-delay: 0.35s; }
 .gallery__grid .gallery__item:nth-child(7)[data-reveal] { transition-delay: 0.42s; }
 .gallery__grid .gallery__item:nth-child(8)[data-reveal] { transition-delay: 0.49s; }
+.gallery__grid .gallery__item:nth-child(9)[data-reveal] { transition-delay: 0.56s; }
 
 /* ============================================
    RESPONSIVE
