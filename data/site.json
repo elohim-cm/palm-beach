@@ -1,13 +1,13 @@
 {
   "name": "Palm Beach",
   "tagline": "Bistrot & Terrasse",
-  "phone": "+237 620 897 603",
+  "phone": "+237 690 578 527",
   "whatsapp": "https://wa.me/237620897603",
   "email": "contact@palmbeach.com",
   "address": {
-    "street": "12 Avenue de la Plage",
-    "city": "Cannes",
-    "zip": "06400"
+    "street": "Résidence Life House, Makepe BM",
+    "city": "Douala",
+    "zip": "00237"
   },
   "googleMapsUrl": "https://maps.google.com/?q=Palm+Beach+Cannes",
   "googleMapsEmbed": "",

@@ -241,7 +241,7 @@
 /* --- Footer: Instagram link --- */
 .events__footer {
   text-align: center;
-  margin-top: var(--space-2xl);
+  margin-top: var(--space-xl);
 }
 
 .events__insta-link {

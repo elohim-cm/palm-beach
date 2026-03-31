@@ -1,6 +1,3 @@
-/* ============================================
-   NAVIGATION — Sticky header, mobile menu, smooth scroll, active link
-   ============================================ */
 
 (function () {
   'use strict';

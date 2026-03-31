@@ -82,7 +82,7 @@
         <div class="menu__item-row">
           <span class="menu__item-name">${item.name}${badge}</span>
           <span class="menu__item-dots" aria-hidden="true"></span>
-          <span class="menu__item-price">${item.price}&euro;${unit}</span>
+          <span class="menu__item-price">${item.price} FCFA${unit}</span>
         </div>
         <p class="menu__item-desc">${item.description}</p>
       </div>`;

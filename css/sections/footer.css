@@ -248,7 +248,7 @@
 /* Mobile < 480px */
 @media (max-width: 479px) {
   .footer__main {
-    padding: var(--space-2xl) 0 var(--space-lg);
+    padding: var(--space-sm) 0 var(--space-lg);
   }
 
   .footer__ornament {
