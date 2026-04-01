@@ -37,6 +37,9 @@
     if (event.recurrent) {
       return { label: 'Chaque semaine', cls: 'recurrent' };
     }
+    if (isPast(event.date)) {
+      return { label: 'Termine', cls: 'past' };
+    }
     if (isThisWeek(event.date)) {
       return { label: 'Cette semaine', cls: 'thisweek' };
     }
@@ -79,8 +82,10 @@
         </div>`
       : '';
 
+    const pastClass = (!event.recurrent && isPast(event.date)) ? ' events__card--past' : '';
+
     return `
-      <article class="events__card" data-reveal>
+      <article class="events__card${pastClass}" data-reveal>
         <div class="events__card-visual">
           <img
             class="events__card-img"
@@ -106,11 +111,12 @@
       if (!res.ok) throw new Error('Failed to load events');
       let events = await res.json();
 
-      // Filter out past non-recurrent events
-      events = events.filter((e) => e.recurrent || !isPast(e.date));
-
-      // Sort: this week first, then by date, recurrents last
+      // Sort: upcoming first, then recurrents, past events last
       events.sort((a, b) => {
+        const aPast = !a.recurrent && isPast(a.date);
+        const bPast = !b.recurrent && isPast(b.date);
+        if (aPast && !bPast) return 1;
+        if (!aPast && bPast) return -1;
         if (a.recurrent && !b.recurrent) return 1;
         if (!a.recurrent && b.recurrent) return -1;
         if (a.recurrent && b.recurrent) return 0;

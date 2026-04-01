@@ -140,6 +140,23 @@
   color: var(--color-white);
 }
 
+.events__card-badge--past {
+  background: rgba(80, 80, 80, 0.82);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.events__card--past .events__card-img {
+  filter: grayscale(60%) brightness(0.8);
+}
+
+.events__card--past .events__card-body {
+  opacity: 0.7;
+}
+
+.events__card--past .events__card-cta {
+  display: none;
+}
+
 /* Date chip on image */
 .events__card-date {
   position: absolute;

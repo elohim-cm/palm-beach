@@ -107,15 +107,15 @@
       "items": [
         {
           "name": "Muscato AC",
-          "description": "",
+          "description": "A partir de 10 000 FCFA",
           "price": "10 000",
           "signature": false
         },
         {
           "name": "Whisky Duty Free",
-          "description": "",
-          "price": "35 000",
-          "signature": true
+          "description": "A partir de 40 000 FCFA",
+          "price": "40 000",
+          "signature": false
         }
       ]
     },

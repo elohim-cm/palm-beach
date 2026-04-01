@@ -1,7 +1,7 @@
-# Palm Beach Cannes — robots.txt
+# Palm Beach Douala — robots.txt
 User-agent: *
 Allow: /
 Disallow: /data/
 
 # Sitemap
-Sitemap: https://palmbeach.com/sitemap.xml
+Sitemap: https://palmbeach.cm/sitemap.xml

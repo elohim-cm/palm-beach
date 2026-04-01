@@ -11,7 +11,7 @@
 /* --- Header --- */
 .reviews__header {
   text-align: center;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
 }
 
 .reviews__surtitle {
@@ -178,7 +178,7 @@
 /* --- CTA --- */
 .reviews__cta {
   text-align: center;
-  margin-top: var(--space-2xl);
+  margin-top: var(--space-lg);
 }
 
 /* --- Reveal --- */

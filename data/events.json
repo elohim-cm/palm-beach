@@ -1,39 +1,13 @@
 [
   {
-    "date": "2026-04-05",
-    "endDate": null,
-    "recurrent": false,
-    "title": "Full Moon Party",
-    "description": "Soiree speciale pleine lune. Cocktails ephemeres, live percussion, ambiance lunaire sur le rooftop.",
-    "time": "20h - 02h",
-    "image": "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=600&q=75",
-    "cta": {
-      "label": "Reserver",
-      "url": "https://wa.me/237620897603?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach."
-    }
-  },
-  {
     "date": null,
     "endDate": null,
     "recurrent": true,
     "recurrentLabel": "Mardi au Jeudi",
     "title": "Happy Hour Afterwork",
-    "description": "-30% sur tous les cocktails de 18h a 20h. L'excuse parfaite pour decompresser entre amis.",
-    "time": "18h - 20h",
-    "image": "https://images.unsplash.com/photo-1575444758702-4a6b9222c016?auto=format&fit=crop&w=600&q=75",
-    "cta": {
-      "label": "Reserver",
-      "url": "https://wa.me/237620897603?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach."
-    }
-  },
-  {
-    "date": "2026-04-12",
-    "endDate": null,
-    "recurrent": false,
-    "title": "Tropical Brunch",
-    "description": "Brunch du dimanche en terrasse. Assiettes exotiques, jus presses, cocktails brunch et DJ acoustique.",
-    "time": "11h - 16h",
-    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=75",
+    "description": "Terminez votre journee en douceur. De 18h a 21h, le Palm Beach vous accueille pour un afterwork convivial : boissons a prix reduits, ambiance relax sous la paillote et bonne humeur garantie. Le meilleur moyen de decompresser apres une longue journee.",
+    "time": "18h - 21h",
+    "image": "data/assets/after-work.jpg",
     "cta": {
       "label": "Reserver",
       "url": "https://wa.me/237620897603?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach."
@@ -44,13 +18,52 @@
     "endDate": null,
     "recurrent": true,
     "recurrentLabel": "Vendredi & Samedi",
-    "title": "Live DJ Sets",
-    "description": "Chaque week-end, un DJ resident ou invite pose le son. Afro house, deep, balearic, nu disco.",
-    "time": "21h - 02h",
-    "image": "https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?auto=format&fit=crop&w=600&q=75",
+    "title": "Soiree Cocktails",
+    "description": "Chaque week-end, le Palm Beach prend une autre dimension. Cocktails prepares a la minute, ambiance feutrée sous les guirlandes et une clientele qui sait profiter de la nuit. Venez entre amis, repartez avec des souvenirs.",
+    "time": "20h - 02h",
+    "image": "data/assets/cocktail-prive.jpg",
     "cta": {
       "label": "Reserver",
       "url": "https://wa.me/237620897603?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach."
+    }
+  },
+  {
+    "date": "2025-12-20",
+    "endDate": null,
+    "recurrent": false,
+    "title": "Arbre de Noel",
+    "description": "Le Palm Beach celebre Noel avec vous. Une soiree festive en plein air : decoration de saison, ambiance chaleureuse, surprises pour les enfants et les grands. Reservez vos places, c'est un evenement a ne pas manquer en famille ou entre proches.",
+    "time": "16h - 22h",
+    "image": "data/assets/arbre-de-noel.jpg",
+    "cta": {
+      "label": "Reserver",
+      "url": "https://wa.me/237620897603?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20pour%20l%27Arbre%20de%20No%C3%ABl%20au%20Palm%20Beach."
+    }
+  },
+  {
+    "date": "2025-12-31",
+    "endDate": null,
+    "recurrent": false,
+    "title": "Reveillon du Nouvel An",
+    "description": "Finissez l'annee en beaute au Palm Beach. Diner de reveillon, ambiance exclusive, compte a rebours en plein air et champagne a minuit. Les places sont limitees — reservez tot pour ne pas passer le 31 ailleurs.",
+    "time": "20h - 04h",
+    "image": "data/assets/reveillon.jpg",
+    "cta": {
+      "label": "Reserver ma place",
+      "url": "https://wa.me/237620897603?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20pour%20le%20R%C3%A9veillon%20du%20Nouvel%20An%20au%20Palm%20Beach."
+    }
+  },
+  {
+    "date": "2026-06-25",
+    "endDate": null,
+    "recurrent": false,
+    "title": "Soiree Anniversaire",
+    "description": "Votre anniversaire merite mieux qu'un restaurant ordinaire. Au Palm Beach, on transforme votre soiree en un vrai moment : cadre tropical en plein air, gateau avec sparklers, bouteille au frais et une equipe qui s'occupe de tout. Vos invites ne sont pas pres d'oublier ca.",
+    "time": "19h - 02h",
+    "image": "data/assets/anniversaire.jpg",
+    "cta": {
+      "label": "Organiser mon anniversaire",
+      "url": "https://wa.me/237620897603?text=Bonjour%2C%20je%20souhaite%20organiser%20ma%20soiree%20d%27anniversaire%20au%20Palm%20Beach."
     }
   }
 ]

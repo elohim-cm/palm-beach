@@ -14,7 +14,7 @@
   grid-template-columns: 1fr;
   gap: var(--space-xl);
   align-items: center;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-md);
 }
 
 /* Image */
@@ -124,7 +124,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-sm);
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-xl);
 }
 
 .privatisation__tag {

@@ -36,23 +36,20 @@
   gap: var(--space-md);
 }
 
+.footer__logo-img {
+  height: 72px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
 .footer__logo-name {
+  display: block;
   font-family: var(--font-heading);
   font-size: var(--fs-xl);
   font-weight: var(--fw-bold);
   color: var(--color-white);
-  line-height: 1.1;
   letter-spacing: 0.04em;
-}
-
-.footer__logo-tagline {
-  font-family: var(--font-body);
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-light);
-  letter-spacing: var(--ls-ultra);
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
-  margin-top: -4px;
 }
 
 .footer__baseline {
@@ -287,10 +284,6 @@
   }
 
   /* Bottom bar */
-  .footer__bottom {
-    padding: var(--space-md) 0 var(--space-lg);
-  }
-
   .footer__bottom-inner {
     gap: 10px;
   }
