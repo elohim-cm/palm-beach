@@ -1,8 +1,4 @@
-/* ============================================
-   HEADER — Sticky, Premium, Mobile-first
-   ============================================ */
 
-/* --- Base Header --- */
 .header {
   position: fixed;
   top: 0;
@@ -10,19 +6,14 @@
   width: 100%;
   height: var(--header-height);
   z-index: 1000;
-  transition:
-    background-color var(--duration-normal) var(--ease-smooth),
-    box-shadow var(--duration-normal) var(--ease-smooth),
-    backdrop-filter var(--duration-normal) var(--ease-smooth);
+  transition:background-color var(--duration-normal) var(--ease-smooth),box-shadow var(--duration-normal) var(--ease-smooth),backdrop-filter var(--duration-normal) var(--ease-smooth);
 }
 
-/* State: at top (transparent) */
 .header--top {
   background-color: transparent;
   box-shadow: none;
 }
 
-/* State: scrolled (dark glass) */
 .header--scrolled {
   background-color: var(--surface-dark-blur);
   backdrop-filter: blur(16px);
@@ -30,7 +21,6 @@
   box-shadow: var(--shadow-header);
 }
 
-/* --- Inner layout --- */
 .header__inner {
   display: flex;
   align-items: center;
@@ -38,7 +28,6 @@
   height: 100%;
 }
 
-/* --- Logo --- */
 .header__logo {
   display: flex;
   align-items: center;
@@ -79,7 +68,6 @@
   margin-top: 2px;
 }
 
-/* --- Desktop Navigation --- */
 .header__nav {
   display: none;
 }
@@ -123,14 +111,12 @@
   width: 100%;
 }
 
-/* --- CTA Button (desktop) --- */
 .header__cta {
   display: none;
   font-size: var(--fs-xs);
   padding: 0.65rem 1.5rem;
 }
 
-/* --- Burger Button --- */
 .header__burger {
   position: relative;
   z-index: 1001;
@@ -157,7 +143,6 @@
   transform-origin: center;
 }
 
-/* Burger → X animation */
 .header__burger.active .header__burger-line:nth-child(1) {
   transform: translateY(7.5px) rotate(45deg);
 }
@@ -171,7 +156,6 @@
   transform: translateY(-7.5px) rotate(-45deg);
 }
 
-/* --- Mobile Menu Overlay --- */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -230,7 +214,6 @@
   opacity: 1;
 }
 
-/* Staggered entrance */
 .mobile-menu.open .mobile-menu__list li:nth-child(1) .mobile-menu__link { transition-delay: 0.05s; }
 .mobile-menu.open .mobile-menu__list li:nth-child(2) .mobile-menu__link { transition-delay: 0.10s; }
 .mobile-menu.open .mobile-menu__list li:nth-child(3) .mobile-menu__link { transition-delay: 0.15s; }
@@ -260,11 +243,6 @@
   transition-delay: 0.35s;
 }
 
-/* ============================================
-   RESPONSIVE — Tablet & Desktop
-   ============================================ */
-
-/* Tablet: 768px+ */
 @media (min-width: 768px) {
   .header__nav {
     display: block;
@@ -291,7 +269,6 @@
   }
 }
 
-/* Desktop: 1024px+ */
 @media (min-width: 1024px) {
   .header__nav-list {
     gap: var(--space-lg);

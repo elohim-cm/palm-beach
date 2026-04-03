@@ -1,6 +1,3 @@
-/* ============================================
-   APP — Reveals, counter animation, init
-   ============================================ */
 
 (function () {
   'use strict';
@@ -8,12 +5,7 @@
   var revealObserver;
   var counterObserver;
 
-  /* ================================================
-     SCROLL REVEAL — IntersectionObserver
-     Supports: data-reveal, data-reveal="left|right|scale|none"
-     Stagger:  data-reveal-delay="1..8"
-     ================================================ */
-
+ 
   function setupRevealAnimations() {
     revealObserver = new IntersectionObserver(
       function (entries) {
@@ -37,16 +29,10 @@
     });
   }
 
-  /* Expose for dynamic content (events, menu, etc.) */
   window.reinitReveal = function () {
     if (revealObserver) observeAll();
   };
 
-  /* ================================================
-     ANIMATED COUNTERS — Features accent numbers
-     Triggers once when the element enters viewport.
-     Works with: data-count="40" data-count-prefix="+"
-     ================================================ */
 
   function setupCounters() {
     var counters = document.querySelectorAll('[data-count]');
@@ -73,13 +59,12 @@
     var target = parseInt(el.dataset.count, 10);
     var prefix = el.dataset.countPrefix || '';
     var suffix = el.dataset.countSuffix || '';
-    var duration = 1200; // ms
+    var duration = 1200;
     var startTime = null;
 
     function step(timestamp) {
       if (!startTime) startTime = timestamp;
       var progress = Math.min((timestamp - startTime) / duration, 1);
-      // Ease-out cubic
       var eased = 1 - Math.pow(1 - progress, 3);
       var current = Math.round(eased * target);
       el.textContent = prefix + current + suffix;
@@ -91,17 +76,12 @@
     requestAnimationFrame(step);
   }
 
-  /* ================================================
-     SMOOTH ANCHOR OFFSET
-     Handles anchor clicks not managed by navigation.js
-     (e.g., footer nav links, CTA links)
-     ================================================ */
 
   function setupSmoothAnchors() {
     document.querySelectorAll('a[href^="#"]:not([data-nav-link])').forEach(function (link) {
       link.addEventListener('click', function (e) {
         var href = link.getAttribute('href');
-        if (href === '#' || href === '#reservation') return; // reservation is external
+        if (href === '#' || href === '#reservation') return;
         var target = document.querySelector(href);
         if (!target) return;
         e.preventDefault();
@@ -116,14 +96,52 @@
     });
   }
 
-  /* ================================================
-     INIT
-     ================================================ */
+  function setupFormSubmit() {
+    var form = document.getElementById('privatisation-form');
+    if (!form) return;
 
+    var toast = document.createElement('div');
+    toast.className = 'toast';
+    document.body.appendChild(toast);
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (res) {
+          if (res.ok) {
+            showToast(toast, 'Demande envoyée avec succès');
+            form.reset();
+          } else {
+            showToast(toast, 'Une erreur est survenue, réessayez.');
+          }
+          btn.disabled = false;
+        })
+        .catch(function () {
+          showToast(toast, 'Une erreur est survenue, réessayez.');
+          btn.disabled = false;
+        });
+    });
+  }
+
+  function showToast(toast, message) {
+    toast.textContent = message;
+    toast.classList.add('toast--visible');
+    setTimeout(function () {
+      toast.classList.remove('toast--visible');
+    }, 3500);
+  }
   function init() {
     setupRevealAnimations();
     setupCounters();
     setupSmoothAnchors();
+    setupFormSubmit();
   }
 
   if (document.readyState === 'loading') {

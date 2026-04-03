@@ -1,8 +1,4 @@
-/* ============================================
-   HERO — Full-screen immersive section
-   ============================================ */
 
-/* --- Container --- */
 .hero {
   position: relative;
   width: 100%;
@@ -16,7 +12,6 @@
   background-color: var(--color-anthracite);
 }
 
-/* --- Background image / video --- */
 .hero__media {
   position: absolute;
   inset: 0;
@@ -27,7 +22,6 @@
   z-index: 1;
 }
 
-/* Subtle slow zoom on load for cinematic feel */
 .hero__media--animate {
   animation: heroZoom 20s ease-out forwards;
 }
@@ -37,19 +31,16 @@
   to   { transform: scale(1); }
 }
 
-/* --- Overlays for readability --- */
 .hero__overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
 }
 
-/* General dark tint */
 .hero__overlay--tint {
   background: rgba(20, 18, 15, 0.4);
 }
 
-/* Bottom gradient for text zone */
 .hero__overlay--gradient {
   background: linear-gradient(
     to top,
@@ -60,7 +51,6 @@
   );
 }
 
-/* --- Content --- */
 .hero__content {
   position: relative;
   z-index: 3;
@@ -73,7 +63,6 @@
   margin-top: var(--space-xl);
 }
 
-/* Decorative line above title */
 .hero__ornament {
   width: 40px;
   height: 1.5px;
@@ -91,7 +80,6 @@
   }
 }
 
-/* Title */
 .hero__title {
   font-family: var(--font-heading);
   font-size: clamp(2.8rem, 7vw, 5.5rem);
@@ -105,7 +93,6 @@
   animation: heroFadeUp 0.9s var(--ease-smooth) 0.5s forwards;
 }
 
-/* Tagline */
 .hero__tagline {
   font-family: var(--font-heading);
   font-size: clamp(1.1rem, 2.5vw, 1.6rem);
@@ -119,7 +106,6 @@
   animation: heroFadeUp 0.9s var(--ease-smooth) 0.75s forwards;
 }
 
-/* Subtitle descriptors */
 .hero__subtitle {
   font-family: var(--font-body);
   font-size: clamp(0.8rem, 1.5vw, 0.95rem);
@@ -144,7 +130,6 @@
   font-weight: var(--fw-medium);
 }
 
-/* CTA group */
 .hero__ctas {
   display: flex;
   flex-direction: column;
@@ -165,7 +150,6 @@
   padding: 0.9rem 2rem;
 }
 
-/* --- Scroll indicator --- */
 .hero__scroll {
   position: absolute;
   bottom: var(--space-lg);
@@ -203,7 +187,6 @@
   50%      { opacity: 0.4; transform: scaleY(0.6); }
 }
 
-/* --- Shared animation --- */
 @keyframes heroFadeUp {
   to {
     opacity: 1;
@@ -211,11 +194,6 @@
   }
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-
-/* Mobile adjustments */
 @media (max-width: 479px) {
   .hero {
     min-height: 550px;
@@ -231,7 +209,6 @@
   }
 }
 
-/* Tablet+ : horizontal CTAs */
 @media (min-width: 480px) {
   .hero__ctas {
     flex-direction: row;
@@ -239,7 +216,6 @@
   }
 }
 
-/* Desktop: slightly more breathing room */
 @media (min-width: 1024px) {
   .hero__content {
     max-width: 900px;
@@ -250,9 +226,6 @@
   }
 }
 
-/* ============================================
-   REDUCED MOTION
-   ============================================ */
 @media (prefers-reduced-motion: reduce) {
   .hero__media--animate {
     animation: none;

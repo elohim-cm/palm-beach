@@ -1,30 +1,9 @@
-/* ============================================
-   ANIMATIONS — Global reveal & micro-interactions
-   ============================================
-
-   System:
-   - data-reveal             → fade up (default)
-   - data-reveal="left"      → fade from left
-   - data-reveal="right"     → fade from right
-   - data-reveal="scale"     → fade + scale up
-   - data-reveal="none"      → no transform, opacity only
-
-   Stagger:
-   - data-reveal-delay="1"   → 0.08s delay
-   - data-reveal-delay="2"   → 0.16s delay
-   - ...up to "8"
-
-   ============================================ */
 
 :root {
   --reveal-duration: 0.7s;
   --reveal-stagger: 0.08s;
   --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-/* ============================================
-   SCROLL REVEAL — Base states
-   ============================================ */
 
 [data-reveal] {
   opacity: 0;
@@ -35,7 +14,6 @@
   will-change: opacity, transform;
 }
 
-/* Direction variants */
 [data-reveal="left"] {
   transform: translateX(-40px);
 }
@@ -52,13 +30,11 @@
   transform: none;
 }
 
-/* Revealed state — all variants */
 [data-reveal].revealed {
   opacity: 1;
   transform: translateY(0) translateX(0) scale(1);
 }
 
-/* Stagger delays via data attribute */
 [data-reveal-delay="1"] { transition-delay: calc(var(--reveal-stagger) * 1); }
 [data-reveal-delay="2"] { transition-delay: calc(var(--reveal-stagger) * 2); }
 [data-reveal-delay="3"] { transition-delay: calc(var(--reveal-stagger) * 3); }
@@ -68,18 +44,13 @@
 [data-reveal-delay="7"] { transition-delay: calc(var(--reveal-stagger) * 7); }
 [data-reveal-delay="8"] { transition-delay: calc(var(--reveal-stagger) * 8); }
 
-/* ============================================
-   MICRO-INTERACTIONS — Buttons
-   ============================================ */
 
-/* Primary button press effect */
 .btn-primary:active {
   transform: translateY(0) scale(0.97);
   box-shadow: var(--shadow-sm);
   transition-duration: 0.1s;
 }
 
-/* Outline button subtle glow on hover */
 .btn-outline:hover {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
 }
@@ -89,18 +60,12 @@
   transition-duration: 0.1s;
 }
 
-/* ============================================
-   MICRO-INTERACTIONS — Cards
-   ============================================ */
-
-/* Concept pillars */
 .concept__pillar {
   transition:
     transform var(--duration-normal) var(--ease-smooth),
     box-shadow var(--duration-normal) var(--ease-smooth);
 }
 
-/* Features cards — subtle border glow on hover */
 .features__card::before {
   content: '';
   position: absolute;
@@ -115,24 +80,15 @@
   border-color: rgba(196, 112, 75, 0.2);
 }
 
-/* Reviews cards — quote color shift on hover */
 .reviews__card:hover .reviews__quote {
   opacity: 0.7;
   transition: opacity var(--duration-normal) var(--ease-out);
 }
 
-/* ============================================
-   MICRO-INTERACTIONS — Gallery
-   ============================================ */
-
-/* Already handled in gallery.css, but add focus ring */
 .gallery__item:focus-visible .gallery__item-overlay {
   opacity: 1;
 }
 
-/* ============================================
-   MICRO-INTERACTIONS — Form inputs
-   ============================================ */
 
 .privatisation__input,
 .privatisation__select,
@@ -149,28 +105,17 @@
   background-color: rgba(232, 220, 200, 0.6);
 }
 
-/* ============================================
-   MICRO-INTERACTIONS — Links & icons
-   ============================================ */
-
-/* Social icons — rotation hint on hover */
 .info__social-link:hover svg,
 .footer__social:hover svg {
   transform: scale(1.1);
   transition: transform var(--duration-fast) var(--ease-smooth);
 }
 
-/* Action buttons — icon nudge */
 .info__action:hover svg {
   transform: translateX(2px);
   transition: transform var(--duration-fast) var(--ease-smooth);
 }
 
-/* Nav link underline already animated in header.css */
-
-/* ============================================
-   SCROLL INDICATOR — Hero (enhanced)
-   ============================================ */
 
 .hero__scroll:hover .hero__scroll-line {
   animation-play-state: paused;
@@ -178,32 +123,16 @@
   transition: height var(--duration-normal) var(--ease-smooth);
 }
 
-/* ============================================
-   ANIMATED COUNTER — Features accent numbers
-   ============================================ */
 
 .features__card-accent[data-count] {
-  /* JS will handle the counting animation */
   display: inline-block;
 }
 
-/* ============================================
-   PARALLAX QUOTES — Reviews
-   ============================================ */
 
 .reviews__quote {
   transition: opacity var(--duration-normal) var(--ease-out);
 }
 
-/* ============================================
-   SECTION TRANSITIONS — Color band continuity
-   ============================================ */
-
-/* Smooth color transitions between sections via spacing, no explicit animation needed */
-
-/* ============================================
-   REDUCED MOTION — Master override
-   ============================================ */
 
 @media (prefers-reduced-motion: reduce) {
   *,

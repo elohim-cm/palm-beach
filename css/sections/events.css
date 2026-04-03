@@ -1,13 +1,9 @@
-/* ============================================
-   EVENTS — Programmation & Agenda
-   ============================================ */
 
 .events {
   padding: var(--section-padding) 0;
   background-color: var(--color-cream);
 }
 
-/* --- Header --- */
 .events__header {
   text-align: center;
   margin-bottom: var(--space-xl);
@@ -42,7 +38,6 @@
   margin: 0 auto;
 }
 
-/* --- Horizontal scroll wrapper --- */
 .events__scroll {
   display: flex;
   gap: var(--space-md);
@@ -54,11 +49,6 @@
   padding-bottom: var(--space-xs);
 }
 
-/*
- * Les cartes à l'intérieur d'un scroll overflow-x créent un overflow-y implicite
- * qui clippe les éléments ayant transform: translateY(32px) (data-reveal).
- * On annule le transform vertical → seule l'opacité anime (fondu).
- */
 .events__scroll [data-reveal] {
   transform: none;
 }
@@ -69,8 +59,6 @@
 .events__scroll::-webkit-scrollbar {
   display: none;
 }
-
-/* --- Card --- */
 .events__card {
   flex: 0 0 300px;
   display: flex;
@@ -90,7 +78,6 @@
   box-shadow: var(--shadow-md);
 }
 
-/* --- Card image --- */
 .events__card-visual {
   position: relative;
   height: 200px;
@@ -109,7 +96,6 @@
   transform: scale(1.04);
 }
 
-/* Badge on image */
 .events__card-badge {
   position: absolute;
   top: var(--space-sm);
@@ -157,7 +143,6 @@
   display: none;
 }
 
-/* Date chip on image */
 .events__card-date {
   position: absolute;
   bottom: var(--space-sm);
@@ -200,7 +185,6 @@
   line-height: 1;
 }
 
-/* Recurrent: show label instead of date */
 .events__card-date--recurrent .events__card-date-num {
   font-size: var(--fs-sm);
   font-family: var(--font-body);
@@ -209,7 +193,6 @@
   text-transform: uppercase;
 }
 
-/* --- Card body --- */
 .events__card-body {
   display: flex;
   flex-direction: column;
@@ -255,7 +238,6 @@
   padding: 0.7rem 1.5rem;
 }
 
-/* --- Footer: Instagram link --- */
 .events__footer {
   text-align: center;
   margin-top: var(--space-xl);
@@ -284,9 +266,6 @@
   stroke-width: 1.5;
 }
 
-/* ============================================
-   REVEAL
-   ============================================ */
 
 .events [data-reveal] {
   opacity: 0;
@@ -301,11 +280,7 @@
   transform: translateY(0);
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
 
-/* Small screens: cards slightly smaller */
 @media (max-width: 479px) {
   .events__card {
     flex: 0 0 270px;
@@ -315,8 +290,6 @@
     height: 170px;
   }
 }
-
-/* Tablet+: grid layout instead of scroll */
 @media (min-width: 768px) {
   .events__scroll {
     display: grid;
@@ -331,16 +304,11 @@
   }
 }
 
-/* Desktop: 3 columns */
 @media (min-width: 1024px) {
   .events__scroll {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-/* ============================================
-   REDUCED MOTION
-   ============================================ */
 @media (prefers-reduced-motion: reduce) {
   .events [data-reveal] {
     opacity: 1;

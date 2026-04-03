@@ -1,14 +1,9 @@
-/* ============================================
-   REVIEWS — Social proof, carousel
-   ============================================ */
-
 .reviews {
   padding: var(--section-padding) 0;
   background-color: var(--color-green-deep);
   color: var(--color-white);
 }
 
-/* --- Header --- */
 .reviews__header {
   text-align: center;
   margin-bottom: var(--space-lg);
@@ -34,7 +29,6 @@
   margin-bottom: var(--space-md);
 }
 
-/* Aggregate rating */
 .reviews__aggregate {
   display: inline-flex;
   align-items: center;
@@ -62,7 +56,6 @@
   fill: var(--color-terracotta);
 }
 
-/* --- Track (scroll container) --- */
 .reviews__track {
   display: flex;
   gap: var(--space-md);
@@ -73,12 +66,6 @@
   overscroll-behavior-x: contain;
   padding-bottom: var(--space-xs);
 }
-
-/*
- * Même raison que events__scroll : overflow-x: auto force overflow-y: auto,
- * ce qui clippe les transform (scale, translateY) des cartes data-reveal.
- * On neutralise le transform → fondu uniquement.
- */
 .reviews__track [data-reveal] {
   transform: none;
 }
@@ -90,7 +77,6 @@
   display: none;
 }
 
-/* --- Single card --- */
 .reviews__card {
   flex: 0 0 320px;
   display: flex;
@@ -110,7 +96,6 @@
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Quote mark */
 .reviews__quote {
   font-family: var(--font-heading);
   font-size: 3.5rem;
@@ -121,7 +106,6 @@
   user-select: none;
 }
 
-/* Review text */
 .reviews__text {
   font-family: var(--font-body);
   font-size: var(--fs-sm);
@@ -132,7 +116,6 @@
   margin-bottom: var(--space-md);
 }
 
-/* Stars row */
 .reviews__stars {
   display: flex;
   gap: 3px;
@@ -152,7 +135,6 @@
   fill: rgba(255, 255, 255, 0.15);
 }
 
-/* Author */
 .reviews__author {
   display: flex;
   align-items: center;
@@ -175,13 +157,11 @@
   letter-spacing: var(--ls-wide);
 }
 
-/* --- CTA --- */
 .reviews__cta {
   text-align: center;
   margin-top: var(--space-lg);
 }
 
-/* --- Reveal --- */
 .reviews [data-reveal] {
   opacity: 0;
   transform: translateY(30px);
@@ -195,9 +175,6 @@
   transform: translateY(0);
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
 
 @media (max-width: 479px) {
   .reviews__card {
@@ -206,7 +183,6 @@
   }
 }
 
-/* Tablet: grid 2 cols */
 @media (min-width: 768px) {
   .reviews__track {
     display: grid;
@@ -221,7 +197,6 @@
   }
 }
 
-/* Desktop: grid 3 cols */
 @media (min-width: 1024px) {
   .reviews__track {
     grid-template-columns: repeat(3, 1fr);
@@ -229,9 +204,6 @@
   }
 }
 
-/* ============================================
-   REDUCED MOTION
-   ============================================ */
 @media (prefers-reduced-motion: reduce) {
   .reviews [data-reveal] {
     opacity: 1;

@@ -1,6 +1,3 @@
-/* ============================================
-   MENU — Tabs & dynamic rendering from JSON
-   ============================================ */
 
 (function () {
   'use strict';
@@ -12,7 +9,6 @@
 
   if (!tabsContainer || !panelsContainer) return;
 
-  /* ---- Fetch & render ---- */
   async function init() {
     try {
       const res = await fetch(MENU_DATA_URL);
@@ -25,9 +21,7 @@
     }
   }
 
-  /* ---- Build tabs + panels ---- */
   function render(categories) {
-    // Tabs
     tabsContainer.innerHTML = categories
       .map((cat, i) =>
         `<button
@@ -41,7 +35,6 @@
       )
       .join('');
 
-    // Panels
     panelsContainer.innerHTML = categories
       .map((cat, i) =>
         `<div
@@ -56,13 +49,11 @@
       )
       .join('');
 
-    // Bind tab clicks
     tabsContainer.querySelectorAll('.menu__tab').forEach((tab) => {
       tab.addEventListener('click', () => switchTab(tab));
     });
   }
 
-  /* ---- Render single item ---- */
   function renderItem(item) {
     const badge = item.signature
       ? `<span class="menu__item-badge">
@@ -88,25 +79,21 @@
       </div>`;
   }
 
-  /* ---- Switch active tab ---- */
   function switchTab(activeTab) {
     const tabId = activeTab.dataset.tab;
 
-    // Update tabs
     tabsContainer.querySelectorAll('.menu__tab').forEach((tab) => {
       const isActive = tab === activeTab;
       tab.classList.toggle('active', isActive);
       tab.setAttribute('aria-selected', isActive);
     });
 
-    // Update panels
     panelsContainer.querySelectorAll('.menu__panel').forEach((panel) => {
       const isActive = panel.id === `menu-panel-${tabId}`;
       panel.classList.toggle('active', isActive);
     });
   }
 
-  /* ---- Boot ---- */
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

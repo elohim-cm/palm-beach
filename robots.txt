@@ -1,7 +1,7 @@
 # Palm Beach Douala — robots.txt
 User-agent: *
 Allow: /
-Disallow: /data/
+Disallow: /data/assets/site.webmanifest
 
 # Sitemap
 Sitemap: https://palmbeach.cm/sitemap.xml

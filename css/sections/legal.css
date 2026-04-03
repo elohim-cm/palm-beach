@@ -1,9 +1,4 @@
-/* ============================================
-   LEGAL PAGES — Shared premium styles
-   Mentions legales, Confidentialite, CGV
-   ============================================ */
 
-/* --- Force header to scrolled state on legal pages --- */
 .page-legal .header {
   background-color: var(--surface-dark-blur);
   backdrop-filter: blur(16px);
@@ -11,9 +6,6 @@
   box-shadow: var(--shadow-header);
 }
 
-/* ============================================
-   HERO SECONDAIRE
-   ============================================ */
 
 .legal-hero {
   background-color: var(--color-black);
@@ -24,7 +16,6 @@
   overflow: hidden;
 }
 
-/* Subtle radial glow behind title */
 .legal-hero::before {
   content: '';
   position: absolute;
@@ -41,7 +32,6 @@
   pointer-events: none;
 }
 
-/* Curved bottom separator */
 .legal-hero::after {
   content: '';
   position: absolute;
@@ -111,9 +101,6 @@
   position: relative;
 }
 
-/* ============================================
-   MAIN CONTENT AREA
-   ============================================ */
 
 .legal-content {
   background-color: var(--color-cream);
@@ -125,7 +112,6 @@
   margin: 0 auto;
 }
 
-/* --- Last updated badge --- */
 .legal-updated {
   display: inline-block;
   font-family: var(--font-body);
@@ -140,9 +126,6 @@
   margin-bottom: var(--space-xl);
 }
 
-/* ============================================
-   TABLE OF CONTENTS (SOMMAIRE)
-   ============================================ */
 
 .legal-toc {
   background: var(--color-white);
@@ -193,9 +176,6 @@
   min-width: 18px;
 }
 
-/* ============================================
-   SECTION BLOCKS
-   ============================================ */
 
 .legal-section {
   margin-bottom: var(--space-xl);
@@ -206,7 +186,6 @@
   margin-bottom: 0;
 }
 
-/* --- Section title with number accent --- */
 .legal-section__title {
   font-family: var(--font-heading);
   font-size: clamp(1.25rem, 2.5vw, 1.6rem);
@@ -228,7 +207,6 @@
   margin-bottom: var(--space-sm);
 }
 
-/* --- Body text --- */
 .legal-section p {
   font-family: var(--font-body);
   font-size: var(--fs-base);
@@ -247,7 +225,6 @@
   color: var(--color-anthracite);
 }
 
-/* --- Links --- */
 .legal-section a {
   color: var(--color-terracotta);
   text-decoration: underline;
@@ -263,7 +240,6 @@
   text-decoration-color: var(--color-terracotta-dark);
 }
 
-/* --- Lists --- */
 .legal-section ul,
 .legal-section ol {
   margin-bottom: var(--space-sm);
@@ -310,10 +286,6 @@
   font-size: var(--fs-sm);
 }
 
-/* ============================================
-   INFO CARD — Identity / contact blocks
-   ============================================ */
-
 .legal-info-card {
   background: var(--color-white);
   border: 1px solid rgba(0, 0, 0, 0.06);
@@ -333,10 +305,6 @@
   margin-bottom: 0;
 }
 
-/* ============================================
-   DIVIDER
-   ============================================ */
-
 .legal-divider {
   border: none;
   height: 1px;
@@ -344,9 +312,6 @@
   margin: var(--space-xl) 0;
 }
 
-/* ============================================
-   CTA — Back to site (bottom)
-   ============================================ */
 
 .legal-bottom-cta {
   text-align: center;
@@ -362,9 +327,6 @@
   margin-bottom: var(--space-md);
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
 
 @media (min-width: 768px) {
   .legal-hero {
@@ -405,9 +367,6 @@
   }
 }
 
-/* ============================================
-   REDUCED MOTION
-   ============================================ */
 
 @media (prefers-reduced-motion: reduce) {
   .legal-hero__back:hover,

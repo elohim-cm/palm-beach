@@ -10,7 +10,6 @@
   const navLinks = document.querySelectorAll('[data-nav-link]');
   const sections = document.querySelectorAll('section[id]');
 
-  /* ---- Sticky header state ---- */
   function updateHeaderState() {
     if (window.scrollY > SCROLL_THRESHOLD) {
       header.classList.remove('header--top');
@@ -20,8 +19,6 @@
       header.classList.add('header--top');
     }
   }
-
-  /* ---- Mobile menu toggle ---- */
   function openMenu() {
     mobileMenu.classList.add('open');
     mobileMenu.setAttribute('aria-hidden', 'false');
@@ -45,7 +42,6 @@
     isOpen ? closeMenu() : openMenu();
   }
 
-  /* ---- Smooth scroll to anchor ---- */
   function scrollToSection(e) {
     e.preventDefault();
     const targetId = e.currentTarget.getAttribute('href');
@@ -62,7 +58,6 @@
     closeMenu();
   }
 
-  /* ---- Active link on scroll (IntersectionObserver) ---- */
   function setupActiveLinks() {
     if (!sections.length) return;
 
@@ -86,7 +81,6 @@
     sections.forEach((section) => observer.observe(section));
   }
 
-  /* ---- Escape key closes menu ---- */
   function handleKeydown(e) {
     if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
       closeMenu();
@@ -94,7 +88,6 @@
     }
   }
 
-  /* ---- Init ---- */
   function init() {
     updateHeaderState();
 

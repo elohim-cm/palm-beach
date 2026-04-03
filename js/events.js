@@ -1,6 +1,3 @@
-/* ============================================
-   EVENTS — Dynamic rendering from JSON
-   ============================================ */
 
 (function () {
   'use strict';
@@ -13,7 +10,6 @@
   const DAYS_SHORT  = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
   const MONTHS_SHORT = ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aout', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  /* ---- Helpers ---- */
 
   function isThisWeek(dateStr) {
     const now = new Date();
@@ -54,9 +50,6 @@
       month: MONTHS_SHORT[d.getMonth()]
     };
   }
-
-  /* ---- Render ---- */
-
   function renderCard(event) {
     const badge = getBadge(event);
 
@@ -110,8 +103,6 @@
       const res = await fetch(EVENTS_URL);
       if (!res.ok) throw new Error('Failed to load events');
       let events = await res.json();
-
-      // Sort: upcoming first, then recurrents, past events last
       events.sort((a, b) => {
         const aPast = !a.recurrent && isPast(a.date);
         const bPast = !b.recurrent && isPast(b.date);
@@ -124,8 +115,6 @@
       });
 
       container.innerHTML = events.map(renderCard).join('');
-
-      // Re-init reveal for dynamically added cards
       if (window.reinitReveal) window.reinitReveal();
 
     } catch (err) {

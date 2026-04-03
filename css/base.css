@@ -1,6 +1,4 @@
-/* ============================================
-   PALM BEACH — Base / Reset
-   ============================================ */
+
 
 *, *::before, *::after {
   margin: 0;
@@ -11,7 +9,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden; /* bloque le scroll horizontal à la racine (Safari inclus) */
+  overflow-x: hidden; 
 }
 
 body {
@@ -60,7 +58,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: var(--ls-tight);
 }
 
-/* --- Utility: Container --- */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -68,7 +65,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 var(--space-md);
 }
 
-/* --- Utility: Screen reader only --- */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -81,7 +77,6 @@ h1, h2, h3, h4, h5, h6 {
   border-width: 0;
 }
 
-/* --- CTA Buttons --- */
 .btn {
   display: inline-flex;
   align-items: center;
