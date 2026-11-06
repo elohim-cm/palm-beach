@@ -6,24 +6,147 @@
       "icon": "utensils",
       "items": [
         {
-          "name": "1/4 Poulet + Frites",
-          "description": "1/4 Chicken + Fries",
+          "name": "1 Portion Frites",
+          "description": "Pommes ou plantains",
+          "price": "500",
+          "signature": false
+        },
+        {
+          "name": "1 Saucisse",
+          "description": "",
+          "price": "1000",
+          "signature": false
+        },
+        {
+          "name": "1 Brochette",
+          "description": "",
+          "price": "200",
+          "signature": false
+        },
+        {
+          "name": "1/4 Poulet",
+          "description": "",
+          "price": "2 000",
+          "signature": false
+        },
+        {
+          "name": "1 Poisson Braisé",
+          "description": "Maquereau, carpe, bar ou cellule",
           "price": "2 500",
           "signature": false
         },
         {
-          "name": "2 Saucisses de Bœuf + Frites",
-          "description": "2 Beef Sausages + Fries",
-          "price": "2 500",
+          "name": "Quart de Poulet + 1 Saucisse + 5 Brochettes + Frites",
+          "description": "Formule",
+          "price": "5 000",
+          "signature": true
+        },
+        {
+          "name": "Quart de Poulet + 1 Poisson + Frites",
+          "description": "Formule",
+          "price": "5 000",
           "signature": false
         },
         {
-          "name": "Poisson Cellule + Pommes",
-          "description": "Grilled Fish + Fried Potatoes",
-          "price": "3 000",
+          "name": "2 Poissons + Demi Poulet + Frites",
+          "description": "Formule",
+          "price": "10 000",
+          "signature": false
+        },
+        {
+          "name": "Demi Poulet + 4 Saucisses + 10 Brochettes + Frites",
+          "description": "Formule",
+          "price": "11 000",
+          "signature": true
+        },
+        {
+          "name": "Poulet Entier + 4 Saucisses + 10 Brochettes + Frites",
+          "description": "Formule",
+          "price": "15 000",
+          "signature": true
+        }
+      ]
+    },
+    {
+      "id": "petit-ivoirien",
+      "name": "Petit Ivoirien",
+      "icon": "utensils",
+      "items": [
+        {
+          "name": "1/4 poulet + atiéké et alloco",
+          "description": "",
+          "price": "3 500",
+          "signature": false
+        },
+        {
+          "name": "Poisson carpe + atiéké et alloco",
+          "description": "",
+          "price": "4 500",
+          "signature": false
+        },
+        {
+          "name": "Demi poulet braisé + atiéké et alloco",
+          "description": "",
+          "price": "4 500",
+          "signature": false
+        },
+        {
+          "name": "Demi poulet mayo + atiéké et alloco",
+          "description": "",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Sauce graine + foutou",
+          "description": "Crabe, poisson fumé, viande et peau du bœuf",
+          "price": "4 500",
           "signature": false
         }
       ]
+    },
+    {
+      "id": "mimi-fume",
+      "name": "Mimi Fumé",
+      "icon": "utensils",
+      "items": [
+        {
+          "name": "1/4 poulet + frites",
+          "description": "",
+          "price": "2 500",
+          "signature": false
+        },
+        {
+          "name": "2 saucisses fumées & braisées + frites",
+          "description": "",
+          "price": "3 000",
+          "signature": false
+        },
+        {
+          "name": "1 échine de porc fumé + frites",
+          "description": "",
+          "price": "3 500",
+          "signature": false
+        },
+        {
+          "name": "1 brochette de porc",
+          "description": "",
+          "price": "200",
+          "signature": false
+        },
+        {
+          "name": "1/4 de poulet mayo",
+          "description": "",
+          "price": "3 500",
+          "signature": false
+        },
+        {
+          "name": "Mix grill",
+          "description": "Demi poulet · 3 gambas · 1 morceau de porc fumé · 3 saucisses · frites de pommes · plantains · bâtons de manioc",
+          "price": "15 000",
+          "signature": false
+        }
+      ],
+      "description": "Complément : bâton de manioc, frites de pommes et plantain"
     },
     {
       "id": "soft-drinks",
@@ -38,8 +161,14 @@
         },
         {
           "name": "Bière",
-          "description": "3 boissons",
-          "price": "2 500",
+          "description": "",
+          "price": "≥ 1 000",
+          "signature": false
+        },
+        {
+          "name": "Sucreries",
+          "description": "",
+          "price": "1 000",
           "signature": false
         },
         {
@@ -47,54 +176,241 @@
           "description": "",
           "price": "1 000",
           "signature": false
+        },
+        {
+          "name": "Monaco",
+          "description": "Tango - Bière, limonade, citron",
+          "price": "1 500",
+          "signature": false
+        },
+        {
+          "name": "Bago",
+          "description": "Tango - Bière, grenadine",
+          "price": "1 500",
+          "signature": false
+        },
+        {
+          "name": "Diabolo Menthe",
+          "description": "Sirop menthe, limonade, citron",
+          "price": "1 500",
+          "signature": false
+        },
+        {
+          "name": "Diabolo Grenadine",
+          "description": "Sirop grenadine, limonade",
+          "price": "1 500",
+          "signature": false
+        },
+        {
+          "name": "Menthe au Lait",
+          "description": "Sirop de menthe, lait écrémé",
+          "price": "1 500",
+          "signature": false
+        },
+        {
+          "name": "Ornelle",
+          "description": "Smoothie - Banane, yaourt, crème, Chambéry",
+          "price": "2 000",
+          "signature": false
+        },
+        {
+          "name": "Lucienne",
+          "description": "Smoothie - Pomme golden, yaourt, crème, grenadine",
+          "price": "2 000",
+          "signature": false
         }
       ]
     },
     {
-      "id": "coffee",
-      "name": "Café",
+      "id": "boissons-chaudes",
+      "name": "Boissons Chaudes",
       "icon": "star",
       "items": [
         {
-          "name": "Café Rhum",
+          "name": "Thé",
+          "description": "Black tea, green tea",
+          "price": "1 000",
+          "signature": false
+        },
+        {
+          "name": "Grog",
           "description": "",
+          "price": "1 000",
+          "signature": false
+        },
+        {
+          "name": "Latte",
+          "description": "",
+          "price": "1 000",
+          "signature": false
+        },
+        {
+          "name": "Espresso",
+          "description": "Serré, allongé",
           "price": "1 000",
           "signature": false
         },
         {
           "name": "Cappuccino",
+          "description": "Café mollu, lait entier",
+          "price": "1 000",
+          "signature": false
+        },
+        {
+          "name": "Chocolat Chaud",
           "description": "",
           "price": "1 000",
           "signature": false
         },
         {
-          "name": "Thé",
-          "description": "",
+          "name": "Café Rhum",
+          "description": "Café mollu, rhum café, liqueur de café, sirop de caramel",
           "price": "1 000",
-          "signature": false
-        },
-        {
-          "name": "Expresso",
-          "description": "",
-          "price": "1 000",
-          "signature": false
+          "signature": true
         }
       ]
     },
     {
       "id": "cocktails",
-      "name": "Mocktail & Cocktail",
+      "name": "Cocktail",
       "icon": "glass",
       "items": [
         {
-          "name": "Mocktail",
-          "description": "",
-          "price": "2 500",
+          "name": "Blue Lagon",
+          "description": "Vodka, blue de Curaçao, citron",
+          "price": "5 000",
           "signature": false
         },
         {
-          "name": "Cocktail",
-          "description": "",
+          "name": "Cosmopolitan",
+          "description": "Vodka, cointreau, citron",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Espresso Martini",
+          "description": "Vodka, kahlua, espresso serrer",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Pink Lady",
+          "description": "Gin, vermouth, sec",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "White Lady",
+          "description": "Gin, triple sec, citron",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Whisky Sour",
+          "description": "Bourdon whisky, citron, canne",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Lynchburg Limonade",
+          "description": "Hennessey, whisky, triple sec, soda tonic, citron",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Alexander",
+          "description": "Cointreau, crème de cacao, crème fraîche",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Sidicar",
+          "description": "Cointreau, triple sec, citron",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Margarita",
+          "description": "Tequila, cointreau, citron",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Tequila Sunrise",
+          "description": "Tequila, orange, red, sirup",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Mojito",
+          "description": "Feuille menthe, sucre citron, rhum, boisson gazeuse, angostura",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Maï-Taï",
+          "description": "Rhum blanc, rhum brun, cointreau, ananas, orange",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Daïquiri",
+          "description": "Rhum blanc, citron, canne",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Americano",
+          "description": "Campari, Martini, Citron, limonade",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Negroni",
+          "description": "Martini, Campari, Gin, Citron, Boisson gazeuse",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Pina Colada",
+          "description": "Lait de coco, Crème fraîche, Rhum blanc, Cognac, Ananas",
+          "price": "5 000",
+          "signature": false
+        },
+        {
+          "name": "Desperados",
+          "description": "Tequila, Citron, Bière desperados",
+          "price": "5 000",
+          "signature": false
+        }
+      ]
+    },
+    {
+      "id": "mocktails",
+      "name": "Mocktail",
+      "icon": "leaf",
+      "items": [
+        {
+          "name": "Fashion Lady",
+          "description": "Ananas, orange, citron, grenadine sirop",
+          "price": "3 500",
+          "signature": false
+        },
+        {
+          "name": "Pussy Fresh",
+          "description": "Lait de coco, orange, ananas, grenadine",
+          "price": "3 500",
+          "signature": false
+        },
+        {
+          "name": "Virgil Mojito",
+          "description": "Feuille menthe, sucre, citron, limonade",
+          "price": "3 500",
+          "signature": false
+        },
+        {
+          "name": "Virgi Colada",
+          "description": "Lait de coco, crème fraîche, ananas",
           "price": "3 500",
           "signature": false
         }
@@ -107,14 +423,38 @@
       "items": [
         {
           "name": "Muscato AC",
-          "description": "A partir de 10 000 FCFA",
+          "description": "",
           "price": "10 000",
           "signature": false
         },
         {
-          "name": "Whisky Duty Free",
-          "description": "A partir de 40 000 FCFA",
+          "name": "Black Label",
+          "description": "Whisky, 1L",
           "price": "40 000",
+          "signature": false
+        },
+        {
+          "name": "Glenmorangie",
+          "description": "Whisky, 1L",
+          "price": "50 000",
+          "signature": false
+        },
+        {
+          "name": "Chivas 18 ans",
+          "description": "Whisky, nouveau format, 1L",
+          "price": "60 000",
+          "signature": true
+        },
+        {
+          "name": "Vin mousseux",
+          "description": "",
+          "price": "≥ 10 000",
+          "signature": false
+        },
+        {
+          "name": "Whisky Duty Free (1 L)",
+          "description": "",
+          "price": "≥ 45 000",
           "signature": false
         }
       ]
@@ -127,7 +467,7 @@
         {
           "name": "Chicha / Hookah",
           "description": "",
-          "price": "3 000",
+          "price": "5 000",
           "signature": false
         }
       ]

@@ -106,14 +106,14 @@ Suivez-nous pour rester informé de nos événements et actualités :
 - 📸 **Instagram** : [@palmbeach](https://instagram.com/palmbeach)
 - 🎵 **TikTok** : [@palmbeach](https://tiktok.com/@palmbeach)
 - 👍 **Facebook** : [Palm Beach](https://facebook.com/palmbeach)
-- 💬 **WhatsApp** : [+237 620 897 603](https://wa.me/237620897603)
+- 💬 **WhatsApp** : [+237 620 897 603](https://wa.me/237690578527)
 
 ---
 
 ## 📞 Contact
 
 ### Réservations
-- **WhatsApp** : [+237 620 897 603](https://wa.me/237620897603?text=Bonjour%2C%20je%20souhaite%20réserver%20une%20table%20au%20Palm%20Beach.)
+- **WhatsApp** : [+237 620 897 603](https://wa.me/237690578527?text=Bonjour%2C%20je%20souhaite%20réserver%20une%20table%20au%20Palm%20Beach.)
 - **Téléphone** : [+237 690 578 527](tel:+237690578527)
 - **Email** : contact@palmbeach.cm
 
@@ -223,7 +223,7 @@ Des centaines de clients satisfaits ont déjà vécu l'expérience Palm Beach. R
 ---
 
 **Site web** : [palmbeach.cm](https://palmbeach.cm)  
-**Réservations** : [WhatsApp](https://wa.me/237620897603)  
+**Réservations** : [WhatsApp](https://wa.me/237690578527)  
 **Localisation** : Résidence Life House, Makepe BM, Douala
 
 🌴 **Palm Beach - Là où le soleil rencontre l'élégance** 🌴

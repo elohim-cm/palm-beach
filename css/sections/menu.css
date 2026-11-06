@@ -107,6 +107,14 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
+.menu__category-note {
+  margin-top: var(--space-md);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  color: var(--color-anthracite-soft);
+  line-height: var(--lh-normal);
+}
+
 .menu__item:last-child {
   border-bottom: none;
 }
@@ -123,7 +131,8 @@
   font-size: var(--fs-md);
   font-weight: var(--fw-bold);
   color: var(--color-anthracite);
-  flex-shrink: 0;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .menu__item-dots {
@@ -246,6 +255,7 @@
 
 @media (min-width: 768px) {
   .menu__tabs {
+    flex-wrap: wrap;
     justify-content: center;
   }
 

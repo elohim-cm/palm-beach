@@ -43,6 +43,7 @@
           role="tabpanel"
         >
           <div class="menu__items">
+            ${cat.description ? `<p class="menu__category-note">${cat.description}</p>` : ''}
             ${cat.items.map((item) => renderItem(item)).join('')}
           </div>
         </div>`

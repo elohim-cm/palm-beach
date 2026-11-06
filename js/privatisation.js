@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('privatisation-form');
   const submitBtn = form.querySelector('button[type="submit"]');
   const whatsappLink = form.querySelector('a[href*="wa.me"]');
-  const phoneNumber = '237620897603';
+  const phoneNumber = '237690578527'; 
   const inputs = form.querySelectorAll('input, select, textarea');
   
   inputs.forEach(input => {

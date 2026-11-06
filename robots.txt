@@ -1,4 +1,4 @@
-# Palm Beach Douala — robots.txt
+# Palm Beach Douala - robots.txt
 User-agent: *
 Allow: /
 Disallow: /data/assets/site.webmanifest

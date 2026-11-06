@@ -2,7 +2,7 @@
   "name": "Palm Beach",
   "tagline": "Bistrot & Terrasse",
   "phone": "+237 690 578 527",
-  "whatsapp": "https://wa.me/237620897603",
+  "whatsapp": "https://wa.me/237690578527",
   "email": "contact@palmbeach.cm",
   "address": {
     "street": "Résidence Life House, Makepe BM",
@@ -11,7 +11,7 @@
   },
   "googleMapsUrl": "https://maps.google.com/?q=Palm+Beach+Cannes",
   "googleMapsEmbed": "",
-  "reservationUrl": "https://wa.me/237620897603?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach.",
+  "reservationUrl": "https://wa.me/237690578527?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20Palm%20Beach.",
   "hours": [
     { "days": "Mardi - Jeudi", "hours": "18h - 01h" },
     { "days": "Vendredi - Samedi", "hours": "18h - 02h" },
